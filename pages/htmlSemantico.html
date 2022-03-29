@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
-        <title>Html introdução</title>
+        <title>Html Semântico</title>
     </head>
     <body>
         <header>
@@ -18,17 +18,171 @@
             <h1> No Html semântico, utilizamos tags especificas para semantica e acessibilidade. Essas tags são interpretadas pelos monitores de acessibiidade e são muito valorizadas pelo motor de busca do google, de forma que é muito importante tê-las para a otimização do SEO da pagina.  Elas não possuem alterações visuais, mas podem funcionar como divs, sendo possivel inclusive a aplicação de efeitos no css. </h1>
         </main>
         <article>
+            
             <section>
                 <h1> Tag Header, Footer e Nav </h1>
-                <p> <code><strong>Tag < header> </strong></code> </p>
-                <p> Tem função de informar ao navegador que trata-se de uma pagina escrita em html5 para que ele possa traduzi-la </p> </br>
-            <p> <strong>< html>< /html></strong> </p>
-                <p> Define que se trata de um documento html </p> </br>
-            <p> <strong>< head>< /head></strong> </p>
-                <p> Dentro dessa tag se escreve algumas configurações da pagina. Como < meta charset="UTF-8"/> , < title> , < link rel="stylesheet" href="arquivo.css"/> veja a definição dessas tags abaixo: </p> </br>
-            <p> <strong>< meta charset="UTF-8"/></strong> </p>
-                <p> Essa tag indica o grupo de caracteres que serão usados na pagina para o navegador interpretar, como acentos, alfabeto, etc. Nesse caso, "UTF-8" caracteriza o grupo de caracteres mais comum e que oferece suporte para vários idiomas. </p> <br/>
-            <p> <strong>< title>< /title> </strong> </p>
+                <p><strong>Tag < header> </strong></p>
+                <p> Indica aos motores de busca, que todo o conteúdo inserido nessa tag refere-se ao cabeçalho da página. Ex: titulo da pagina e subtitulo </p> </br>
+            <p> <strong>Tag < nav></strong> </p>
+                <p> Indica aos motores de busca, que dentro dessa tag está o menu principal da pagina, para facilitar a linkagem dos links das paginas do site, e tambem para a leitura pelos monitores de acessibilidade. </p> </br>
+            <p> <strong>Tag < footer></strong> </p>
+                <p> Conteudos de rodapé. Quem criou, termos de uso, ano do site, etc <br/>
+                </p> </br>
+            <p> <strong>Veja exemplos dessas tags aplicadas: <br/><br/> </strong> </p>
+            <p> <xmp>
+            <html>
+                <head>
+                    <title> titulo da pagina </title>
+                    <link href="estilo.css" rel="stylesheet"/>
+                </head>
+                <body>
+                    <header>
+                        <h1> titulo da pagina </h1>
+                        <p> subtitulo da pagina </p>
+                    </header>
+                    <nav>
+                        <a href="" > link 1 </a>
+                        <a href="" > link 2 </a>
+                        <a href="" > link 3 </a>
+                    </nav>
+                    <footer>
+                        <p>Rodapé da pagina</p>
+                    </footer>
+                </body>
+            </html>
+            </xmp> </p>
+
+            </section>
+            
+            <section>
+
+                <h1> Tag Main, Section, Article, Aside e Time </h1>
+                <p> <strong> < main> < /main> </strong> </p>
+                    <p> Essa tag é utilizada para definir o conteudo principal da pagina. </p> <br/>
+                <p> <strong> < section> < /section> </strong> </p>
+                    <p> Esta tag separa os assuntos diferentes sobre o conteudo da pagina, não os misturando entre si. </p> <br/>
+                <p> <strong> < article> < /article> </strong> </p>
+                    <p> Assunto principal da pagina, uma noticia, materia, artigo, etc. Importante para SEO. </p> <br/>
+                <p> <strong> < aside> < /aside> </strong> </p>
+                     <p> Usa-se essa tag para alocar os conteudos secundário da pagina  </p> <br/>
+                <p> <strong> < time> < /time> </strong> </p>
+                     <p> Nessa tag é possivel especificar datas para escaneamento do codigo da pagina, não é visivel ao navegador. </b> <br/> <br/>
+                        
+                <p> <strong>Veja exemplos dessas tags aplicadas: <br/><br/> </strong> </p>  
+
+                <xmp> 
+            <html>
+                <head>
+                    <title> titulo da pagina < /title>
+                    <link href="estilo.css" rel="stylesheet"/>
+                </head>
+                <body>
+                    <header>
+                        <h1> titulo da pagina </h1>
+                        <p> subtitulo da pagina </p>
+                    </header>
+                    <nav>
+                        <a href="" > link 1 </a>
+                        <a href="" > link 2 </a>
+                        <a href="" > link 3 </a>
+                    </nav>
+                    <main>
+                        <section>
+                        </section> 
+                        <article> 
+                        </article>
+                        <aside> 
+                        </aside>
+                        <time datetime="1997-01´13"> Data do meu animersário </time>
+                    </main>
+                </body>
+            </html>
+                </xmp>
+                <br/>
+                <p><b>Considerações sobre a tag main </b> </p> <br/>
+                <p>
+                    * só é possivel ter uma por página home. <br/>
+                    *A tag Main só pode ser " filho" ou "pai" de section. <br/>
+                    *A tag Main nunca será "filho" de aside, footer, nav, header e article <br/>
+                    A tag MAIN tem uma única função semântica: definir o conteúdo principal da página ou da aplicação. Ele representa o conteúdo mais importante da página, que está diretamente relacionado ao tópico central do documento ou a funcionalidade principal de uma aplicação.
+                </p>
+
+            </section>
+
+            <section>
+
+                <h1> Tag address </h1>   
+                <p> <strong> < address> < /address> </strong> </p>
+                <p> Nessa tag se coloca informações de endereço e contato no rodapé <br/> </p> </br>
+                <p> <strong> Veja o exemplo a seguir </strong> </p> 
+
+                <xmp>
+                <footer>
+                    <p> os direitos reservados... </p>
+                    <address>
+                        <p> Site feito por mim </p>
+                        <p> para contato: suporte@suporte.com </p>
+                        <p> Av. Consolação 1200 - Higienópolis, São Paulo.</p>
+                    </address>
+                </footer>
+                </xmp>
+
+            </section>
+
+            <section>
+
+                <h1> Tag Figure </h1>   
+                <p> <strong> < figure> < /figure> </strong> </p>
+                <p> Essa tag é utilizada em Semantica para definir que uma imagem faz parte do contexto do texto, quando se quer inserir uma legenda para a imagem. <br/> </p> </br>
+                <p> <strong> Veja o exemplo a seguir </strong> </p> 
+
+                <figure>
+                    <img src="../assets/images/flower.jpg"/>
+                    <figcaption>Imagem de uma flor</figcaption>
+                </figure>
+                <br/>
+
+            
+
+            
+                <xmp>
+                    <figure>
+                        <img src="../assets/images/flower.jpg"/>
+                        <figcaption>Imagem de uma flor</figcaption>
+                    </figure>
+                </xmp>
+
+                <p> Para a estilização nesse caso, foram usadas as seguintes propriedades:</p><br/>
+                figure {<br/>
+                    padding: 5px;<br/>
+                    margin: 0px;<br/>
+                    border: 1px solid black;<br/>
+                    text-align: center;<br/>
+                
+                }<br/><br/>
+                figcaption {<br/>
+                    background-color: grey;<br/>
+                }<br/>
+            </p>
+
+            </section>
+
+            <section>
+
+                <h1> Tags de citações </h1>   
+                <p> <strong> < cite> < /cite> </strong> </p>
+                <p> O elemento <cite>< cite> representa uma referência a um trabalho artístico. Deve incluir o título do trabalho ou uma URL de referência, que pode ser em uma forma abreviada de acordo com as convenções usadas para a adição dos metadados de citação.< /cite></cite> </p> <br/>
+                <p> <strong> < blockquote> < /blockquote> </strong> </p>
+                <p> <blockquote> O Elemento < blockquote> indica que o texto incluído é uma longa citação. Normalmente, este é processado visualmente pelo recuo.< /blockquote></blockquote> </p> <br/>
+                <p> <strong> < q> < /q> </strong> </p>
+                <p> O elemento  <q>< q> indica que o texto em anexo é uma cotação curta em linha.< /q> </q> A maioria dos navegadores modernos implementam isso cercando o texto entre aspas. Este elemento é destinado a citações curtas que não exigem quebras de parágrafo; para citações longas, use o elemento < blockquote>.
+               </p>
+        
+
+
+
+                
+           
                 
 
 

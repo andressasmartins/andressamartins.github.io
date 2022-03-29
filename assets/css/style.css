@@ -97,6 +97,18 @@ section a {
 table{
     margin: auto;
 }
+
+figure {
+    padding: 10px;
+    margin:auto;
+    border: 1px solid black;
+    text-align: center;
+    width: 100px;
+
+}
+figcaption {
+    background-color: grey;
+}
  footer {
     margin-top: 10%;
     padding: 15px;
