@@ -1,0 +1,113 @@
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    font-family: roboto;
+    height:90%;
+}
+header {
+    width: auto;
+    padding: 50px;
+    background-color: #F6EDEE;
+    border-bottom: #F6D7E8 dashed 4px;
+    
+
+}
+header h1 {
+    display:flex;
+    justify-content: center;
+    font-weight: 250;
+    
+}
+header h2 {
+    display: flex;
+    justify-content: right;
+    padding-top: 5px;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+#mainpginicial {
+    padding-top:50px;
+    padding-bottom:50px;
+    padding-left:10%;
+    padding-right:10%;
+    
+}
+
+main {
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+}
+main h1 {
+    font-weight: normal;
+    font-size: 20px;
+}
+main h1 a {
+    text-decoration: none;
+    color: #000;
+}
+main h1 a:hover {
+    text-decoration: underline;
+}
+#menu {
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#menu section {
+    width: 120px;
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
+    word-wrap: break-word;
+}
+section {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+section h1 {
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+section a {
+    text-decoration: none;
+    color: #000;
+}
+.color1 {
+    background-color: #DCD0EA;
+}
+.color2 {
+    background-color: #F1DCC5;
+}
+.color3 {
+    background-color: #F2E8CE;
+}
+.color4 {
+    background-color: #F6D7E8;
+}
+.color5 {
+    background-color: #F6EDEE;
+}
+
+table{
+    margin: auto;
+}
+ footer {
+    margin-top: 10%;
+    padding: 15px;
+    text-align: center;
+    height: fit-content;
+    background-color: #F6EDEE;
+ }
+ footer h1, footer h2, footer p, footer a, footer p a{
+     font-size: 12px;
+     text-decoration: none;
+ }
+
+ 
+ 

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,user-scalable=0"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
+        <title>Html introdução</title>
+    </head>
+    <body>
+        <header>
+            <h1>Introdução em Html</h1>
+            <h2> por Andressa Martins</h2>
+        </header>
+        <main>
+            <h1> <b> indice: </b> <a href="#estrutura">Estrutura</a>, <a href="#formatacao">formatação de texto</a>, <a href="#comentarios">comentários</a>, <a href="#listas">listas</a> e <a href="#tabelas">tabelas.</a></h1>
+        </main>
+        <article>
+            <section>
+                <h1 id="estrutura"> Estrutura padrão para escrever o HTML da pagina </h1>
+               
+                    <p> Dentro dessa tag se escreve o titulo da pagina que fica escrito na aba do navegador </p> <br/>
+                <p> <strong>< link rel="stylesheet" href="arquivo .css"</strong>/> </p>
+                    <p> Usado para a aplicação dos estilos criados no CSS </p> <br/>
+                <p> <strong>< body> </strong> </p>
+                    <p> Dentro dessa tag se escreve o html da pagina em si, todo o conteudo do site como cabeçalho, textos, imagens, videos, rodapé, etc. </p> <br/>
+                <p> <strong>< div>< /div></strong> </p>
+                    <p> É utilizada para agrupar e fazer divisões nos elementos da pagina. </p> <br>
+                <p> <strong>< h1>< /h1> , < h2>< /h2> , < h3>< /h3> , etc.</strong> </p>
+                    <p> Essas tags são headings, usadas para titulos e cabeçalhos, podem ir do 1 ao 6 e são muito usada para o SEO do google. <p> <br/>
+                <p> <strong>< a href="http://..." >< /a></strong> </p>
+                    <p> Essa tag é utilizada para atribuir links a imagens, textos, botões, videos, etc. Para utilizá-la é preciso seguir a seguinte estrutura: </p>
+                    <strong>< a href= </strong><u>"link para onde será redirecionado" </u> <strong>target="_blank" </strong> (para abrir em nova aba do navegador) <strong>title= </strong>"titulo qualquer para aparecer ao passar o mouse em cima" > Inserir aqui o texto, imagem, botão, etc. <strong> < /a> </strong> </p> <br/>
+                <p> <strong>< img src= </strong> <u>"arquivo/link.png"</u> <strong> alt= </strong>"nome/descrição da imagem" /> </strong> </p>
+                    <p> Essa tag utilizada para inserir imagem ao html da pagina </p><br/>
+                <p> <strong> < button> texto < /button> </strong> </p>
+                    <p> Para utilizar essa tag basta escrever entre as tags o nome do botão, por exemplo: < button> Enviar< /button> </p> </br>
+                <p> <strong> < strong> Frase em negrito < /strong> </strong> </p>
+                    <p> Usa-se  essa tag para deixar textos com enfase (negrito) </p> <br/>
+                <p> <strong> < p> < /p> </strong> </p>
+                    <p> Essa tag é usada para marcação de inicio de parágrafo. O paragrafo é escrito entre as tags. </p> <br/>
+                <p> <strong> <u>< u> Frase em sublinhado < /u></u> </strong> </p>
+                    <p> Usa-se essa tag para deixar palavras e frases em sublinhado. </p> <br/>
+                <p> <strong> < ul > </br>.... < li> 1 < /li> </br>....< li> 2 < /li> <br>< /ul> </strong> </p>
+                    <p> Usa-se essa estrutura de tags para fazer uma lista <u>não ordenada (ul)</u>, cada <strong> "< li> nome do item < /li>" </strong> corresponde a um item de lista, pode-se ter quantos itens quiser. </p> <br/>
+                <p> <strong> < ol > </br>.... < li> 1 < /li> </br> ....< li> 2 < /li> <br> < /ol> </strong> </p> 
+                    <p> Usa-se essas tags para fazer uma <u>lista ordenada (ol)</u>, cada <strong> "< li> nome do item < /li>" </strong> corresponde a um item de lista, que vai ser <u>enumerado por ordem</u>. Pode-se ter quantos itens quiser. </p><br/>
+                <p> <strong>< br/></strong> </p>
+                    <p>Usa-se essa tag para fazer uma quebra de linha </p> <br/>
+                <p> <strong> < hr></strong> </p>
+                    <p> Usa-se essa tag para traçar uma linha horizontal na pagina </p> </br>
+            
+                <p> <b>Basicamete </b>, essa é a estrutura padrão de uma pagina html</p> </br>
+                   <p> < !DOCTYPE html> </p>
+                   <p> ....< html> </p>
+                   <p> ........< head> </p>
+                   <p> ............ < meta charset="UTF-8"/> </p>
+                   <p> ............ < link rel="stylesheet" type="text/css" href="assets/css/style.css"/> </p>
+                   <p> ............ < title>Título da página</ title> </p>
+                   <p> ........< /head> </p>
+                   <p> ........< body> </p>
+                   <p> ............< div> 
+                   <p> ................< h1> Alguma frase < /h1></p>
+                   <p> ............< /div>
+                   <p> ........< /body> </p>
+                   <p> ....< /html> </p>
+            </section>
+
+            <section>
+                <h1 id="formatacao"> Formatações de texto no Html </h1>
+                <p> <strong> < b> Negrito < /b> </strong> </p>
+                    <p> Usa-se essa tag para colocar a fonte do texto em negrito, sem necessariamente querer enfatizar o texto. </p> <br/>
+                <p> <strong> < strong> Negrito < /strong> </strong> </p>
+                    <p> Usa-se essa tag para enfatizar texto em negrito, !importancia! </p> <br/>
+                <p> <strong> <i> < i> Texto em italico < /i> </i></strong> </p>
+                    <p> Usa-se essa tag para colocar a fonte do texto em italico, sem necessariamente querer enfatizar o texto. </p> <br/>
+                <p> <strong> <em> < em> Texto em itálico < /em> </em> </strong> </p>
+                     <p> Usa-se essa tag para enfatizar texto em italico, !importancia!  </p> <br/>
+                <p> <strong> <small> < small> frase em fonte um pouco menor< /small></small></strong> </p>
+                    <p> Usa-se essa tag para deixar uma frase em uma fonte um pouco menor do que a do texto, um de seus usos é para descrição de imagens. </p> <br/>
+                <p> <strong> <del> < del> Texto riscado < /del> </del></strong> </p>
+                    <p> Usa-se essa tag para fazer efeito riscado, cancelado, em um texto.</p> <br/>
+                <p> <strong> <mark> < mark> Marca texto na frase < /mark> </mark></strong> </p> 
+                    <p> Efeito de marca texto na frase. </p> <br/>
+                <p> <strong> < sup><sup>  Coloca o texto tipo em potencia </sup>< /sup></strong> </p>
+                    <p> Coloca o texto menor e acima, tipo em potencia. </p> <br/>
+                <p> <strong> < sub><sub>Coloca o texto abaixo, em letra menor</sub> < /sub></strong> </p>
+                    <p> Faz o oposto do sup, deixa o texto menor e alinhado abaixo. </p> <br/>
+            </section>
+
+            <section>
+                <h1 id="comentarios"> Como fazer comentários no HTML </h1>
+
+                <p> <strong> < !--Inserir aqui o comentário--> </strong> </p>
+                    <p> Para inserir comentários no html, basta fazer essa tag. Os comentários somente são visiveis no codigo html da pagina, dessa forma, não aparece na pagina do navegador. Os comentários servem como instrução ou lembretes para quem tem acesso ao codigo da pagina. Ao inspecionar a pagina é possivel ver um comentário bem aqui -> <!--Este é um comentário--> </p> <br>
+            </section>
+            <section>
+                <h1 id="listas"> Como fazer listas no html </h1>
+                
+                <p> Para colocar listas no html basta usar as tags < ol> < /ol> para inserir listas ordenadas por numeros, ou < ul> < /ul> para listas não ordenadas por numeros, apenas com simbolos de lista. Veja exemplos:</p><br/>
+                <p> <strong>Lista não ordenada:</strong> <p/>
+                <p>
+                    <ul> < ul> 
+                    <li> < li> Café < /li> </li>
+                    <li>< li> Chá < /li></li>
+                    <li>< li> Leite < /li> </li>
+                < /ul> </ul>
+                </p> </br>
+            
+                <p> <b> Para mudar o estilo dos topicos ou da ordenação, basta fazer o seguinte:</b> </p> <br/>
+                <p> <strong>Lista não ordenada:</strong> </p> <br/>
+                <p> <ul style="list-style-type:square"> < ul style="list-style-type:square"> 
+                    <li> < li> Café < /li> </li>
+                    <li>< li> Chá < /li></li>
+                    <li>< li> Leite < /li> </li>
+                    < /ul> </ul>
+                </p> <br/>
+                <p> Note que o simbolo da lista mudou para um quadrado. Algumas outras formas: circle, disc, none </p> </br>
+                
+                <p>Vejamos agora exemplos para a lista ordenada:</p> <br/>
+                <p> <b> Lista ordenada </b> </p> <br/>
+                <p><ol type="I" start="5"> < ol type="I" start="5"> 
+                    <li> < li> Café < /li> </li>
+                    <li>< li> Chá < /li></li>
+                    <li>< li> Leite < /li> </li>
+                    < /ol> <br/>   
+                </ol>
+                </p> </br>
+                <p>É possivel mudar o estilo da ordenação, e também definir a partir de qual numero a lista deve começar, no exemplo acima o estilo foi definido em numeros romanos e foi ordenado que a lista começasse no numero 5. Algumas outras formas de ordenar a lista: 1, A, a, i, I </p> </br>
+
+                <h1> Como fazer listas, dentro de listas</h1>
+
+                <ul style="list-style-type: circle"> < ul style="list-style-type: circle"> 
+                    <li> ...< li> Café < /li> </li>
+                    <li>...< li> Chá 
+                        <ol type="a"> ..< ol type="a"
+                            <li> ......< li> Hortelã < /li></li>
+                            <li> ......< li> Camomila < /li> </li>
+                            <li> ......< li> Cidreira < /li></li>
+                        </ol>..< /ol>< /li></li>
+                    <li>...< li> Leite 
+                        <ol> < ol>
+                        <li> ......< li> Em pó < /li> </li> 
+                        <li> ......< li> Em caixa < /li> </li>
+                        </ol> ..< /ol>
+                    < /li> </li>
+                    < /ul> </ul> </p>
+
+                <h1 id="tabelas"> Tabelas no html </h1>
+
+                <p> Para fazer tabelas no html, basta seguir a seguinte estrutura: <br/>
+                    < table width="400 px" border="1"> - infos de largura e borda<br/>
+                        < thead>  - cabeçalho da tabela <br/>
+                            < tr>  - linha <br/>
+                                < th>Item 1< /th>  - coluna 1 da linha do cabeçalho <br/>
+                                < th> Item 2< /th>  - coluna 2 da linha do cabeçalho <br/>
+                            < /tr>  - fechamento de tag linha <br/>
+                        < /thead>  - fechamento de tag cabeçalho da tabela <br/>
+                        < tbody>  - corpo da tabela <br/>
+                            < tr>  - linha 1 <br/>
+                                < td>1< /td>  - coluna 1 da linha 1 <br/>
+                                < td>2< /td>  - coluna 2 da linha 1 <br/>
+                            < /tr>  - fechamento da linha 1 <br/>
+                            < tr>  - linha 2 <br/>
+                                < td>3< /td>  - coluna 1 da linha 2 <br/>
+                                < td>4< /td>  - coluna 2 da linha 2 <br/>
+                            < /tr>  - fechamento da linha 2 <br/>
+                            < tr>  - linha 3 <br/>
+                                < td>5< /td>  coluna 1 da linha 3 <br/>
+                                < td>6< /td>  coluna 2 da linha 3 <br/>
+                            < /tr>  -  fechamento da linha 3 <br/>
+                        < /tbody>  - fechamento do corpo da tabela <br/>
+                    < /table>  - fechamento da tabela. <br/><br/>
+                    <p> <b>O resultado é o seguinte:<b></p> </br>
+
+            <table width="400 px" border="1">
+                <thead>
+                    <tr>
+                        <th>Item 1</th>
+                        <th> Item 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p><br/>
+            </section>
+
+        </article>
+
+    </body>
+    <footer>
+        <h1>Projeto desenvolvido por <a href="http://github.com/andressasmartins" target="blank"> Andressa Martins </a> </h1>
+        <h2>Atualizado em <b>Março de 2022</b></h2>
+        <p>Contato: <a href="mailto:x.andressamartins@gmail.com" target="blank">x.andressamartins@gmail.com</address></p>
+
+    </footer>
+</html>
