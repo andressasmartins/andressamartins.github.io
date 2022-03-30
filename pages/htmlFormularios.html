@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,user-scalable=0"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+        <title>Formulários em Html</title>
+    </head>
+    <body>
+        <header>
+            <h1>Formulários em Html</h1>
+            <h2> por Andressa Martins</h2>
+        </header>
+        <main>
+            <h1> <b> indice: </b> <a href="#estrutura">Estrutura</a>, <a href="#formatacao">formatação de texto</a>, <a href="#comentarios">comentários</a>, <a href="#listas">listas</a> e <a href="#tabelas">tabelas.</a></h1>
+        </main>
+        <article>
+
+            <section>
+                <h1 id="comofazer"> Como fazer Formulários em HTML </h1>
+                <p> <strong> Formulários são utilizados para que o usuário possa inserir/escolher, informações dentro de uma pagina. Para fazer formulários, basta seguir a seguinte estrutura:</strong> </p> <br/>
+                    
+                <p> <strong> 1. Primeiro é utilizada a tag < form action="login.html" method="POST"(ou "GET") > </strong> </p>
+                <form action="login.html" method="POST"/>
+                    <p>Nessa tag  é inserida a pagina para onde as informações serão enviadas e onde o usuário será redirecionado. No <b>form action</b> é colocado o endereço da pagina para onde as informações irão, já no Method, é possivel inserir <b>GET</b>, em que as irformações ficam visiveis na url, ou <b>POST</b>, em que as informçaões não aparecem na url. </p> <br/>
+                <p> <strong> 2. Depois são inseridas as tags de input, select, textarea, button.</strong> </p>
+                    <p> Essas tags servem para definir que tipo de dados, informações e campos vão ser apresentados na pagina. </p> <br/>
+
+
+            </section>
+
+            <section>
+                <h1 id="taginput"> Tags de Input</h1>
+                <p> <strong> Nessa tag é preciso seguir a seguinte estrutura: </strong> </p> <br/>
+                     < input type="tipodoinput" name="nomedocampo" value="autopreenchimento de valor preestabelecido"/> </strong> </p> <br/>
+                     <p> Veja os diferentes tipos de input:  </p> <br/> </br>
+                <p> <strong> < input type="text"/> </strong> </p> </br>
+                    <p>  <input type="text" name="nomedocampo" value="input text"/> </p> <br/>
+                    <p> < input type="text" name="nomedocampo" value="input text"/> </p> <br/> <br/>
+                <p> <strong> < input type="email"/> </strong> </p> </br>
+                    <p>  <input type="email" name="nomedocampo" value="input email"/> </p> <br/>
+                    <p> < input type="email" name="nomedocampo" value="input email"/> </p> <br/> <br/>
+                <p> <strong> < input type="password"/> </strong> </p> </br>
+                    <p>  <input type="password" name="nomedocampo" value="input password"/> </p> <br/>
+                    <p> < input type="password" name="nomedocampo" value="input password"/> </p> <br/> <br/>
+                <p> <strong> < input type="checkbox"/> </strong> </p> </br>
+                    <p>  <input type="checkbox" name="check" /> 0 <input type="checkbox" name="check"/> 1 <input type="checkbox" name="check" /> 2 <input type="checkbox" name="check" /> 3 <input type="checkbox" name="check"/> 4 <input type="checkbox" name="check" /> </p> <br/>
+                    <p> < input type="checkbox" name="nomedocampo"/> </p> <br/> <br/>
+                <p> <strong> < input type="ratio"/> </strong> </p> </br>
+                    <p> <input type="radio" name="sexo"/> feminino <br/>
+                    <p> <input type="radio" name="sexo"/> masculino <br/><br/>
+                    <p> Nessa tag é preciso colocar o mesmo name em todos os campos de escolha você for usar, para poder agrupá-los e definir o preencimento de um unico campo dentre as opções </p><br/>
+                    <p> < input type="radio" name="sexo"/> feminino  <br/>
+                    < input type="radio" name="sexo"/> masculino  </p> <br/> <br/>
+                <p> <strong> < input type="submit"/> </strong> </p> </br>
+                    <p>  <input type="submit" name="nomedocampo" value="submit"/> </p> <br/>
+                    <p> < input type="submit" name="nomedocampo" value="submit"/> </p> <br/> 
+                    <p>Essa tag é o botao de envio das informações</p><br/>
+                    </form>
+
+            </section>
+
+            <section>
+
+                <h1 id="typesinput"> Types derivados do text na TAG INPUT, no html 5, ou seja, suportados apenas em navegadores recentes.</h1>
+
+                        <form action="login.html" method="POST" >
+                        <b>< input type="color" name="cor"/> </b><br/><br/>
+                        <input type="color" name="cor"/> <br/><br/>
+                        <b>< input type="date" name="data"/> </b><br/><br/>
+                        <input type="date" name="data"/> <br/><br/>
+                        <b>< input type="datetime-local" name="dataehora"/></b> <br/><br/>
+                        <input type="datetime-local" name="dataehora"/> <br/><br/>
+                        <b>< input type="month" name="mes"/></b> <br/><br/>
+                        <input type="month" name="mes"/> <br/><br/>
+                        <b>< input type="email" name="email" value="email@acb.com"/> </b><br/><br/>
+                        <input type="email" name="email" value="email@abc.com"/> <br/><br/>
+                        <b>< input type="number" name="numero" value="123"/></b> <br/><br/>
+                        <input type="number" name="numero" value="123"/> <br/><br/>
+                        <b>< input type="range" name="range"/></b> <br/><br/>
+                        <input type="range" name="range"/> <br/><br/>
+                        <b>< input type="search" name="pesquisar" value="pesquisar"/></b> <br/><br/>
+                        <input type="search" name="pesquisar" value="pesquisar"/> <br/><br/>
+                        <b>< input type="tel" name="telefone" value="123"/> </b><br/><br/>
+                        <input type="tel" name="telefone" value="123"/> <br/><br/>
+                        <b>< input type="time" name="hora"  /> </b><br/><br/>
+                        <input type="time" name="hora" /> <br/><br/>
+                        <b>< input type="url" name="url" value="http://enderecourl.com"/> </b><br/><br/>
+                        <input type="url" name="url" value="http://enderecourl.com"/> <br/><br/>
+                        <b>< input type="week" name="semana"/> </b><br/><br/>
+                        <input type="week" name="semana"/> <br/>
+                        <br/>
+
+                </section>
+
+                <section>
+
+                    <h1 id="tagselect"> Tag Select</h1>
+                    <p> O select é utilizado para estabelecer um leque de opções preestabelecidas, para o usuário escolher e selecionar alguma entre elas.</p> <br/>
+                        <b> Para utilizar essa tag, é preciso seguir a seguinte estrutura, veja:</b> <br/><br/>
+
+                    <xmp>
+                        <form action="login.html" method="get">
+
+                            <select name="ordenacao">
+                            <option></option>
+                            <option value="bestseller"> Mais vendidos </option>
+                            <option value="New"> Mais recentes </option>
+                            <option value="cheap"> Mais baratos </option>
+                            <option value="expensive" selected> Mais caros </option>
+                            </select> 
+                            
+                            <input type="submit" value="ir"/>
+                        </form>
+                    </xmp>
+                    <br/>
+                    <p> <strong>O resultado é o seguinte:</strong></p>
+
+                    <p><form action="login.html" method="get">
+
+                        <select name="ordenacao">
+                        <option></option>
+                        <option value="bestseller"> Mais vendidos </option>
+                        <option value="New"> Mais recentes </option>
+                        <option value="cheap"> Mais baratos </option>
+                        <option value="expensive" selected> Mais caros </option>
+                        </select> 
+                        
+                        <input type="submit" value="ir"/>
+                    </form> </p> <br/>
+
+
+                   <p> É possivel também permitir a seleção de mais de uma opção atraves do uso do ctrl + cliques. Mas para isso, é necessário utilizar os seguintes atributos dentro da tag select: </p><br/>
+                        <p>< select name="ordenacao" size="2" multiple></p><br/> 
+
+                        <p><strong> Dessa forma, o resultado é o seguinte:</strong></p>
+
+                    <form action="login.html" method="get">
+        
+                        <select name="ordenacao" size="2" multiple>
+                        <option></option>
+                        <option value="bestseller"> Mais vendidos </option>
+                        <option value="New"> Mais recentes </option>
+                        <option value="cheap"> Mais baratos </option>
+                        <option value="expensive" selected> Mais caros </option>
+                        </select> 
+                        
+                        <input type="submit" value="ir"/>
+                    </form>
+
+                </section>
+
+                <section>
+
+                    <h1 id="textarea"> Tag Textarea </h1>
+                    <p> Essa tag é utilizada para inserir um campo de texto maior, ele é multilinha, ou seja, é possivel existir quebras de linhas. Em sua forma padrão, é possivel redimensionar a caixa de texto com o mouse ao clicar no canto inferior direito. Veja abaixo a estrutura da tag e como  ela fica no navegador:</p> <br/><br/>
+                    <p> < textarea name="areadetextomultilinha"> < /textarea> </p><br/>
+                    <textarea name="areadetextomultilinha"></textarea> <br/>
+                    <br/>
+                    <p> É possivel ainda, personalizar o tamanho da caixa de texto com o CSS e torná-lo fixo. Veja o exemplo: </p> <br/>
+        
+                    <p>< textarea name="areadetextomultilinha" style="width: 300px; height: 150px; border:1px dashed blue;"> < /textarea> </p> <br/><br/>
+                    <textarea name="areadetextomultilinha" style="width: 300px; height: 150px; border:1px dashed blue;"> </textarea>
+                
+
+                </section>
+
+                <section>
+
+                    <h1> Tag Button </h1>
+                    <p> Essa tag é utilizada com a mesma finalidade do input submit, para enviar as informações do formulário. Veja sua estrutura e aparencia no navegador a seguir:</p> <br/><br/>
+                    <p>    < button> Enviar < /button> </p> <br/><br/>
+                    <p> <button>Enviar</button></p>
+
+                </section>
+                
+                <section>
+                    
+                    <h1> Tag Label </h1>
+                    <p> Essa tag é utilizada para escrever as instruções do campo a ser preenchido, e também para fazer a autoseleção do campo ao clicar em cima de sua descrição. Veja os dois exemplos a seguir:</p> <br/><br/>
+                    
+                    Nesse exemplo, o label é utilizado para nomear/instruir sobre o que deve ser preenchido no campo. Veja: <br/>
+                    <br/>
+                    <form method="GET">
+                    < label>Nome completo:< /label> <br/>
+                    < input type="text" name="nome"> <br/>
+                    <br/>
+                    <label>Nome completo:</label> <br/>
+                    <input type="text" name="nome"> <br/>
+                    <br/>
+                    Já nesse exemplo, note que é possivel selecionar o campo de texto ao clicar em seu nome/descrição, nesse caso é usao os atributos de "id" e "for". <br/>
+                    <br/>
+                    < label for="nome">Nome completo:< /label> <br/>
+                    < input type="text" name="nome" id="nome"> <br/>
+                    <br/>
+                    <label for="nome">Nome completo:</label> <br/>
+                    <input type="text" name="nome" id="nome"> <br/>
+                    <br/>
+                    Outro exemplo de como o label para seleção pode ser utilizado. Note que nesse exemplo, o label é utilizado depois da tag de input, e não antes, dessa forma, o texto de seleção fica alinhado depois do campo de checkbox. Veja: <br/>
+                    <br/>
+                    < input type="checkbox" name="termos" id="termos"> <br/>
+                    < label for="termos">declaro que li os termos de uso< /label> <br/>
+                    <br/>
+                    <input type="checkbox" name="termos" id="termos">
+                    <label for="termos">declaro que li os termos de uso</label> <br/>
+                    <br/>
+                    Outra forma de organizar e estruturar o label dentro dos formulários e que dispensa o uso de "id" e "for" é a seguinte: <br/>
+                    <br/>
+                    < label> <br/>
+                        Nome completo: < br/><br/>
+                        < input type="text" name="nome"/> <br/>
+                    < /label> <br/><br/>
+        
+                    <label>
+                        Nome completo: <br/>
+                        <input type="text" name="nome"/>
+                    </label><br/><br/>
+                    
+                    < label><br/>
+                        < input type="checkbox" name="termos"/><br/>
+                        Declaro que li os termos de uso<br/>
+                    < /label> <br/><br/>
+        
+                    <label>
+                        <input type="checkbox" name="termos"/>
+                        Declaro que li os termos de uso
+                    </label>
+                </form>
+
+                </section>
+                        
+                <section>
+                    <h1> Tags FIELDSET E LEGEND</h1>
+                    <p>Essas tags são utilizadas para fazer a separação do formulário por seções, por exemplo: dados pessoais, dados profissionais, formação academica, etc. Para utilizar essa tag, basta abri-la e colocar todos os conteudos das seções a serem agrupadas. Veja exemplos: </p> <br/> <br/>
+                    <p>  <form method="get" id="form1">
+
+                        <fieldset>
+                            <legend>Dados Pessoais</legend>
+        
+                            <label>
+                                Nome completo: <br/>
+                                <input class="inputmaior" type="text" name="nome"/>
+                            </label>
+        
+                            <label>
+                                Data de nascimento:
+                                <Input type="date" name="data"/>
+                            </label>
+        
+                            <label>
+                                RG:
+                                <Input type="number" name="rg"/>
+                            </label>
+        
+                            <label>
+                                CPF:
+                                <Input type="number" name="cpf"/>
+                            </label>
+        
+                            <label>
+                                Sexo:
+                                <Input type="radio" name="sexo"/> Indefinido
+                                <Input type="radio" name="sexo"/> Masculino
+                                <Input type="radio" name="sexo"/> Feminino
+                            </label>
+        
+                    </fieldset>
+        
+                    <fieldset>
+                        <legend>Informações de contato</legend>
+        
+                        <label>
+                            E-mail: <br/>
+                            <Input class="inputmaior" type="email" name="email"/>
+                        </label>
+                    
+                        <label>
+                            Telefone:
+                            <Input type="tel" name="telefone"/>
+                        </label>
+        
+                        <label>
+                            Celular:
+                            <Input type="tel" name="celular"/>
+                        </label>
+        
+                    </fieldset>
+        
+                    <fieldset>
+                        <legend>Endereço</legend>
+        
+                        <label>
+                            Rua:<br/>
+                            <Input class="inputmaior" type="text" name="rua"/>
+                        </label>
+        
+                        <label>
+                            Cidade:
+                            <Input type="text" name="cidade"/>
+                        </label>
+        
+                        <label>
+                            Estado:
+                            <select name="Estado">
+                                <option>SP</option>
+                                <option>RJ</option>
+                                <option>MG</option>
+                                <option>PR</option>
+                                <option>SC</option>
+                                <option>RS</option>
+                                <option>ES</option>
+                                <option>MT</option>
+                                <option>GO</option>
+                            </select>
+                        </label>
+        
+                    </fieldset>
+        
+                    <label id="confirmar">
+                        Confirmar e enviar: <br/>
+                        <button>OK</button>
+                    </label> 
+                </form></p>
+                <xmp>
+                    <form method="get" id="form1">
+
+                        <fieldset>
+                            <legend>Dados Pessoais</legend>
+        
+                            <label>
+                                Nome completo: <br/>
+                                <input class="inputmaior" type="text" name="nome"/>
+                            </label>
+        
+                            <label>
+                                Data de nascimento:
+                                <Input type="date" name="data"/>
+                            </label>
+        
+                            <label>
+                                RG:
+                                <Input type="number" name="rg"/>
+                            </label>
+        
+                            <label>
+                                CPF:
+                                <Input type="number" name="cpf"/>
+                            </label>
+        
+                            <label>
+                                Sexo:
+                                <Input type="radio" name="sexo"/> Indefinido
+                                <Input type="radio" name="sexo"/> Masculino
+                                <Input type="radio" name="sexo"/> Feminino
+                            </label>
+        
+                        </fieldset>
+            
+                        <fieldset>
+                            <legend>Informações de contato</legend>
+            
+                            <label>
+                                E-mail: <br/>
+                                <Input class="inputmaior" type="email" name="email"/>
+                            </label>
+                        
+                            <label>
+                                Telefone:
+                                <Input type="tel" name="telefone"/>
+                            </label>
+            
+                            <label>
+                                Celular:
+                                <Input type="tel" name="celular"/>
+                            </label>
+            
+                        </fieldset>
+            
+                        <fieldset>
+                            <legend>Endereço</legend>
+            
+                            <label>
+                                Rua:<br/>
+                                <Input class="inputmaior" type="text" name="rua"/>
+                            </label>
+            
+                            <label>
+                                Cidade:
+                                <Input type="text" name="cidade"/>
+                            </label>
+            
+                            <label>
+                                Estado:
+                                <select name="Estado">
+                                    <option>SP</option>
+                                    <option>RJ</option>
+                                    <option>MG</option>
+                                    <option>PR</option>
+                                    <option>SC</option>
+                                    <option>RS</option>
+                                    <option>ES</option>
+                                    <option>MT</option>
+                                    <option>GO</option>
+                                </select>
+                            </label>
+            
+                        </fieldset>
+            
+                        <label id="confirmar">
+                            Confirmar e enviar: <br/>
+                            <button>OK</button>
+                        </label> 
+                    </form>
+                    </xmp>
+
+                </section>
+
+                <section>
+                    <h1>Validações nativas nos campos de formulários</h1>
+                    <p> Para garantir que as informações nos campos sejam preenchidas corretamente pelo usuário, pode-se utilizar as validações nativas presentes no navegador, que verificam e alertam sobre irregularidades no preenchimento dos campos. Para isso são utilizados os seguintes atributos: </p> <br/>
+                    <p> <strong> required, minlength=0123..., maxlength=0123..., step=1,2,3..., min=123..., max=123..., min=2021-08-15, pattern, etc.</strong> </p> <br/>
+                    <p> Veja no formulário algumas aplicações dessas validações:  </p><br/> <br/>
+                       
+                        <form method="get" id="form1">
+            
+                            <fieldset>
+                                <legend>Dados Pessoais</legend>
+            
+                                <label>
+                                    Nome completo: <br/>
+                                    <input class="inputmaior" type="text" name="nome" required/>
+                                </label>
+            
+                                <label>
+                                    Data de nascimento:
+                                    <Input type="date" name="data" required min="2021-08-15"/>
+                                </label>
+            
+                                <label>
+                                    RG:
+                                    <Input type="text" name="rg" required minlength="9" maxlength="9"/>
+                                </label>
+            
+                                <label>
+                                    CPF:
+                                    <Input type="text" name="cpf" required minlength="11" maxlength="11"/>
+                                </label>
+            
+                                <label>
+                                    Sexo:
+                                    <Input type="radio" name="sexo"/> Indefinido
+                                    <Input type="radio" name="sexo"/> Masculino
+                                    <Input type="radio" name="sexo"/> Feminino
+                                </label>
+            
+                        </fieldset>
+            
+                        <fieldset>
+                            <legend>Informações de contato</legend>
+            
+                            <label>
+                                E-mail: <br/>
+                                <Input class="inputmaior" type="email" name="email" required/>
+                            </label>
+                        
+                            <label>
+                                Telefone:
+                                <Input type="tel" name="telefone" minlength="9" />
+                            </label>
+            
+                            <label>
+                                Celular:
+                                <Input type="tel" name="celular" required minlength="9"/>
+                            </label>
+            
+                        </fieldset>
+            
+                        <fieldset>
+                            <legend>Endereço</legend>
+            
+                            <label>
+                                Rua:<br/>
+                                <Input class="inputmaior" type="text" name="rua" required/>
+                            </label>
+            
+                            <label>
+                                Cidade:
+                                <Input type="text" name="cidade" required/>
+                            </label>
+            
+                            <label>
+                                Estado:
+                                <select name="Estado" required>
+                                    <option>SP</option>
+                                    <option>RJ</option>
+                                    <option>MG</option>
+                                    <option>PR</option>
+                                    <option>SC</option>
+                                    <option>RS</option>
+                                    <option>ES</option>
+                                    <option>MT</option>
+                                    <option>GO</option>
+                                </select>
+                            </label>
+            
+                        </fieldset>
+            
+                        <label id="confirmar">
+                            Confirmar e enviar: <br/>
+                            <button>OK</button>
+                        </label> 
+                    </form>
+
+                    <xmp>
+                           
+                            <form method="get" id="form1">
+                
+                                <fieldset>
+                                    <legend>Dados Pessoais</legend>
+                
+                                    <label>
+                                        Nome completo: <br/>
+                                        <input class="inputmaior" type="text" name="nome" required/>
+                                    </label>
+                
+                                    <label>
+                                        Data de nascimento:
+                                        <Input type="date" name="data" required min="2021-08-15"/>
+                                    </label>
+                
+                                    <label>
+                                        RG:
+                                        <Input type="text" name="rg" required minlength="9" maxlength="9"/>
+                                    </label>
+                
+                                    <label>
+                                        CPF:
+                                        <Input type="text" name="cpf" required minlength="11" maxlength="11"/>
+                                    </label>
+                
+                                    <label>
+                                        Sexo:
+                                        <Input type="radio" name="sexo"/> Indefinido
+                                        <Input type="radio" name="sexo"/> Masculino
+                                        <Input type="radio" name="sexo"/> Feminino
+                                    </label>
+                
+                            </fieldset>
+                
+                            <fieldset>
+                                <legend>Informações de contato</legend>
+                
+                                <label>
+                                    E-mail: <br/>
+                                    <Input class="inputmaior" type="email" name="email" required/>
+                                </label>
+                            
+                                <label>
+                                    Telefone:
+                                    <Input type="tel" name="telefone" minlength="9" />
+                                </label>
+                
+                                <label>
+                                    Celular:
+                                    <Input type="tel" name="celular" required minlength="9"/>
+                                </label>
+                
+                            </fieldset>
+                
+                            <fieldset>
+                                <legend>Endereço</legend>
+                
+                                <label>
+                                    Rua:<br/>
+                                    <Input class="inputmaior" type="text" name="rua" required/>
+                                </label>
+                
+                                <label>
+                                    Cidade:
+                                    <Input type="text" name="cidade" required/>
+                                </label>
+                
+                                <label>
+                                    Estado:
+                                    <select name="Estado" required>
+                                        <option>SP</option>
+                                        <option>RJ</option>
+                                        <option>MG</option>
+                                        <option>PR</option>
+                                        <option>SC</option>
+                                        <option>RS</option>
+                                        <option>ES</option>
+                                        <option>MT</option>
+                                        <option>GO</option>
+                                    </select>
+                                </label>
+                
+                            </fieldset>
+                
+                            <label id="confirmar">
+                                Confirmar e enviar: <br/>
+                                <button>OK</button>
+                            </label> 
+                        </form>
+                    </xmp>
+
+
+                </section>
+
+                <section>
+                    <h1> Autofocus, Placeholder e Maxlenght</h1>
+                    <p> Atraves do placeholder é possivel escrever dentro da caixa de texto a instrução sobre o que deve ser preenchido. </p> <br/>
+                    <p> Através do autofocus é possivel deixar ativo o campo de texto automaticamente para o uruário escrever sem precisar clicar como mouse. </p> <br/>
+                    <p> Através do maxlenght ou minlenght é possivel definir um tamanho maximo ou minimo de caracteres permitidos no campo. </p> <br/>
+                    <p> Através do min e max, é possivel definir um valor maximo em numeros permitido no campo de texto. </p> <br/>
+                    <p> Required  com mensagem de aviso personalizado: </p><br/>
+                    <p> required oninvalid="setCustomValidity('Por favor, preencha este campo')" onchange="try{setCustomValidity('')}catch(e){}" /></p><br/>
+                    <p> Autocomplete="on" serve para autocompletar o campo com informações salvas pelo navegador. Para nao permitir o autopreenchimento no site basta colocar autocomplete="off" </p> <br/>
+                    <p> Veja exemplos:</p><br/>
+
+                        <form method="GET">
+                            <label>
+                                Nome completo: <br/>
+                                <input class="inputmaior" type="text" name="nome" placeholder="Nome completo" autofocus maxlength="5" required oninvalid="setCustomValidity('Por favor, preencha este campo com o seu nome')" onchange="try{setCustomValidity('')}catch(e){}"/>
+                            </label>
+                            <br/>
+                            <label>
+                                E-mail: <br/>
+                                <input type="email" name="email" placeholder="seu e-mail" autocomplete="on" required oninvalid="setCustomValidity('Por favor, preencha este campo com o seu e-mail')" onchange="try{setCustomValidity('')}catch(e){}" />
+                            </label>
+                            <input type="submit" value="Enviar"/>
+                         </form>
+
+                            <xmp>
+                                <form method="GET">
+                                    <label>
+                                        Nome completo: <br/>
+                                        <input class="inputmaior" type="text" name="nome" placeholder="Nome completo" autofocus maxlength="5" required oninvalid="setCustomValidity('Por favor, preencha este campo com o seu nome')" onchange="try{setCustomValidity('')}catch(e){}"/>
+                                    </label>
+                                    <br/>
+                                    <label>
+                                        E-mail: <br/>
+                                        <input type="email" name="email" placeholder="seu e-mail" autocomplete="on" required oninvalid="setCustomValidity('Por favor, preencha este campo com o seu e-mail')" onchange="try{setCustomValidity('')}catch(e){}" />
+                                    </label>
+                                    <input type="submit" value="Enviaar"/>
+                                    </form>
+                            </xmp>
+
+                </section>
+
+                <section>
+
+                    <h1> TAG Input type hidden</h1>
+                    <p> Nessa tag, é possivel colocar um campo de informações oculto, não acessivel ao usuário e que não é permitido a sua alteração. Essa informação só é acessivel aos desenvolvedores do codigo, pode ser usado para marcar e identificar informações uteis no formulario, como ids, usuário, pais de origem, etc. </p> <br/>
+                        <form method="GET" enctype="multipart/form-data">
+                        <input type="hidden" name="pais" value="BR"/>
+                        <input type="submit"/>
+                        <br/> <br/>
+                        <p> Note que ao clicar no botão de enviar, aparece na url as informações de país selecionadas automaticamente, e que não é possivel ver nenhum campo ou forma de modificá=la no formulario do navegador.</p>
+                        <xmp>
+                                
+                            <form method="GET" enctype="multipart/form-data">
+                            <input type="hidden" name="pais" value="BR"/>
+                            <input type="submit"/>
+
+                        </xmp>
+                    
+
+                </section>
+
+                <section>
+
+                    <h1>TAG Input type file</h1>
+                    <p>Nessa tag é possivel permitir que o usuário anexe e envie arquivos pelo formulario, como imagens, documentos, etc. Veja a estrutura da tag abaixo: </p> <br/>
+                      <p> < input type="file"/> - Qualquer arquivo <br/>
+                       <input type="file"/> </p> <br/>
+                    <p>< input type="file" accept="image/*"/> - <b>Para imagens</b> <br/>
+                        <input type="file" accept="image/*"/> </p> <br/>
+                        < input type="file" accept="application/pdf"/> - <b>Para pdf</b> <br/>
+                        <input type="file" accept="application/pdf"/> <br/> <br/>
+                        <b>Importante:</b> Sempre que for utilizar essa tag para permitir o envio de arquivos, é necessário fazer uma especificação de encriptação dentro da tag < form>, para que o servidor receba corretamente o arquivo. Dessa forma, é preciso fazer o seguinte: </b> <br/>
+                       <br/>
+                       < form method="GET" enctype="multipart/form-data"> <br/>
+                       </form>
+
+                </section>
+
+                    
+
+    </body>
+    <footer>
+        <h1>Projeto desenvolvido por <a href="http://github.com/andressasmartins" target="blank"> Andressa Martins </a> </h1>
+        <h2>Atualizado em <b>Março de 2022</b></h2>
+        <p>Contato: <a href="mailto:x.andressamartins@gmail.com" target="blank">x.andressamartins@gmail.com</address></p>
+
+    </footer>
+</html>
