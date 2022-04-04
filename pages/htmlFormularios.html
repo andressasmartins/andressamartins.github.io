@@ -15,7 +15,7 @@
             <h2> por Andressa Martins</h2>
         </header>
         <main>
-            <h1> <b> indice: </b> <a href="#estrutura">Estrutura</a>, <a href="#formatacao">formatação de texto</a>, <a href="#comentarios">comentários</a>, <a href="#listas">listas</a> e <a href="#tabelas">tabelas.</a></h1>
+            <h1> <b> indice: </b> <a href="#taginput">Tag input</a>, <a href="#typesinput">Tipos de input</a>, <a href="#tagselect">Tag Select</a>, <a href="#textarea">Tag textarea</a>, <a href="#tagbutton">Tag button</a>, <a href="#taglabel">Tag Label</a>, <a href="#tagfieldset">Tag Fieldset e Legend</a>, <a href="#validacoesnativas">Validações Nativas </a>, <a href="#autofocus"> Autofocus, Placeholder e Maxlenght </a>, <a href="#hidden">Tag input type hidden </a>,  <a href="#file">Tag input type file.</a>
         </main>
         <article>
 
@@ -170,7 +170,7 @@
 
                 <section>
 
-                    <h1> Tag Button </h1>
+                    <h1 id="tagbutton"> Tag Button </h1>
                     <p> Essa tag é utilizada com a mesma finalidade do input submit, para enviar as informações do formulário. Veja sua estrutura e aparencia no navegador a seguir:</p> <br/><br/>
                     <p>    < button> Enviar < /button> </p> <br/><br/>
                     <p> <button>Enviar</button></p>
@@ -179,7 +179,7 @@
                 
                 <section>
                     
-                    <h1> Tag Label </h1>
+                    <h1 id="taglabel"> Tag Label </h1>
                     <p> Essa tag é utilizada para escrever as instruções do campo a ser preenchido, e também para fazer a autoseleção do campo ao clicar em cima de sua descrição. Veja os dois exemplos a seguir:</p> <br/><br/>
                     
                     Nesse exemplo, o label é utilizado para nomear/instruir sobre o que deve ser preenchido no campo. Veja: <br/>
@@ -233,7 +233,7 @@
                 </section>
                         
                 <section>
-                    <h1> Tags FIELDSET E LEGEND</h1>
+                    <h1 id="tagfieldset"> Tags FIELDSET E LEGEND</h1>
                     <p>Essas tags são utilizadas para fazer a separação do formulário por seções, por exemplo: dados pessoais, dados profissionais, formação academica, etc. Para utilizar essa tag, basta abri-la e colocar todos os conteudos das seções a serem agrupadas. Veja exemplos: </p> <br/> <br/>
                     <p>  <form method="get" id="form1">
 
@@ -319,7 +319,7 @@
         
                     </fieldset>
         
-                    <label id="confirmar">
+                    <label>
                         Confirmar e enviar: <br/>
                         <button>OK</button>
                     </label> 
@@ -409,7 +409,7 @@
             
                         </fieldset>
             
-                        <label id="confirmar">
+                        <label>
                             Confirmar e enviar: <br/>
                             <button>OK</button>
                         </label> 
@@ -419,7 +419,7 @@
                 </section>
 
                 <section>
-                    <h1>Validações nativas nos campos de formulários</h1>
+                    <h1 id="validacoesnativas">Validações nativas nos campos de formulários</h1>
                     <p> Para garantir que as informações nos campos sejam preenchidas corretamente pelo usuário, pode-se utilizar as validações nativas presentes no navegador, que verificam e alertam sobre irregularidades no preenchimento dos campos. Para isso são utilizados os seguintes atributos: </p> <br/>
                     <p> <strong> required, minlength=0123..., maxlength=0123..., step=1,2,3..., min=123..., max=123..., min=2021-08-15, pattern, etc.</strong> </p> <br/>
                     <p> Veja no formulário algumas aplicações dessas validações:  </p><br/> <br/>
@@ -600,7 +600,7 @@
                 
                             </fieldset>
                 
-                            <label id="confirmar">
+                            <label>
                                 Confirmar e enviar: <br/>
                                 <button>OK</button>
                             </label> 
@@ -611,7 +611,7 @@
                 </section>
 
                 <section>
-                    <h1> Autofocus, Placeholder e Maxlenght</h1>
+                    <h1 id="autofocus"> Autofocus, Placeholder e Maxlenght</h1>
                     <p> Atraves do placeholder é possivel escrever dentro da caixa de texto a instrução sobre o que deve ser preenchido. </p> <br/>
                     <p> Através do autofocus é possivel deixar ativo o campo de texto automaticamente para o uruário escrever sem precisar clicar como mouse. </p> <br/>
                     <p> Através do maxlenght ou minlenght é possivel definir um tamanho maximo ou minimo de caracteres permitidos no campo. </p> <br/>
@@ -653,7 +653,7 @@
 
                 <section>
 
-                    <h1> TAG Input type hidden</h1>
+                    <h1 id="hidden"> TAG Input type hidden</h1>
                     <p> Nessa tag, é possivel colocar um campo de informações oculto, não acessivel ao usuário e que não é permitido a sua alteração. Essa informação só é acessivel aos desenvolvedores do codigo, pode ser usado para marcar e identificar informações uteis no formulario, como ids, usuário, pais de origem, etc. </p> <br/>
                         <form method="GET" enctype="multipart/form-data">
                         <input type="hidden" name="pais" value="BR"/>
@@ -673,7 +673,7 @@
 
                 <section>
 
-                    <h1>TAG Input type file</h1>
+                    <h1 id="file">TAG Input type file</h1>
                     <p>Nessa tag é possivel permitir que o usuário anexe e envie arquivos pelo formulario, como imagens, documentos, etc. Veja a estrutura da tag abaixo: </p> <br/>
                       <p> < input type="file"/> - Qualquer arquivo <br/>
                        <input type="file"/> </p> <br/>

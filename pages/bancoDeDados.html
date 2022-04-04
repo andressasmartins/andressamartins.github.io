@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,user-scalable=0"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+        <title>Banco de Dados</title>
+    </head>
+    <body>
+        <header>
+            <h1>Banco de Dados SQL </h1>
+            <h2> por Andressa Martins</h2>
+        </header>
+        <main>
+            <h1> <b> indice: </b> <a href="#"></a>, <a href="#"></a>, <a href="#"></a>, <a href="#"></a>, <a href="#"></a>, <a href="#"></a>, <a href="#"></a>
+        </main>
+        <article>
+
+            <section>
+                <h1>O que é Banco de Dados?</h1>
+                <p> Bancos de dados são locais/softwares de armazenamento, agrupamento e organização de informações. Os bancos de dados possum um sistema de gerenciamento para facilitar a manipulação e consulta dos dados armazenados. Os sistemas mais comuns são SQL, MySQL, PostgreSQL, Oracle, etc. </p>
+                
+                <h1>HeidiSQL, phpMyAdmin, MySQL Workbench, DBeaver, etc </h1>
+                <p> São "Clientes MySQL", são Softwares utilizados para consultar o software original do banco de dados. Esses softwares são utilizados para fornecer uma interface grafica ao banco de dados de modo a facilitar a visualização e organização. </p>
+
+            </section>
+
+            <section>
+
+                <h1> Operações no MySQL</h1>
+                <p> <strong> Porta padrão do MySQL :</strong> 3306  </p>
+                <p> <strong> C: </strong> Create = Criar = Inserir dados 3306  </p>
+                <p> <strong> R: </strong> Read = Ler = Pegar dados  </p>
+                <p> <strong> U: </strong> Update = Atualizar = Modificar dados existentes </p>
+                <p> <strong> D: </strong> Delete = Excluir = Remover dados existentes </p>
+
+                
+            </section>
+
+            <section>
+                <h1>Opções de informações na coluna</h1>
+                <p>Cada coluna tem algumas informações que as definem:</p> </br>
+                <strong><p>Nome da coluna</p>
+                <p>Tipo da coluna</p>
+                <p>Tamanho da coluna</p>
+                <p>Se a coluna aceita NULL </p>
+                <p>Valor padrão</p></strong>
+            </section>
+
+            <section>
+                <h1> Tipos de dados das colunas</h1>
+                <p> É possivel configurar cada coluna para identificar determinados caracteres, como numeros inteiros, numeros reais, textos, numeros pequenos, numeros extensos, textos extensos, datas, horarios, etc. Veja alguns exemplos: </p> </br>
+                <p> <b> TINYINT </b> - Para numeros inteiros pequenos ex: 3.</p>
+                <p> <b> INT </b> - Para numeros inteiros </p>
+                <P> <b> BIGINT </b> - Para numeros inteiros muito extensos </P>
+                <p> <b> FLOAT </b> - Para números com virgula ex. valores </p>
+                <p> <b> VARCHAR </b> - Para textos de até 20 mil caracteres (permitido caracteres especiais)</p>
+                <p> <b> TEXT </b> - Para textos grandes com paragrafos EX.BLOG</p>
+                <p> <b> LONGTEXT </b> - Para até 4gb de texto.- </p>
+                <p> <b> DATE </b> - Para datas (em formato internacional yyyy/mm/dd) </p>
+                <p> <b> TIME </b> - Para horas </p>
+                <p> <b> DATETIME </b> - Para data e hora juntas </p>
+                <p> <b> TIMESTAMP </b> - Para uma conversão de segundos em uma data. </p>
+            </section>
+
+            <section>
+                <h1> Comandos para consultas </h1>
+                <h2>SQL Select</h2> <br/>
+                <p>Através desse comando é prossivel fazer uma seleção de informações especificas que queira consultar. Veja exemplos:</p> <br/>
+                <p><b> SELECT * FROM produtos;</b> - Nesse comando é possivel fazer um levantamento de todas (* = tudo) as informações listadas na tabela produtos</p> <br/>
+                <p><b> SELECT nome FROM produtos; </b> - Nesse comando é possivel fazer um levantamento de todos os nomes da tabela de produtos </p> <br/>
+                <p> <b> SELECT nome, preco FROM produtos;</b> - Através da virgula é possivel selecionar mais de uma coluna de informações para serem exibidas. Nesse caso, os nomes e os preços. </p> <br/>
+
+                <h2> SQL Where </h2> <br/>
+                <p> Através desse comando é possivel especificar e afunilar a consulta, filtrando somente as informações especificas que queira consultar. Veja exemplos: </p> <br/>
+                <p> <b> SELECT * FROM produtos WHERE id_fornecedor = 6; </b> - Selecionar tudo de produtos onde id_fornecedor seja igual a 6. </p> <br/>
+                <p> <b> SELECT * FROM produtos WHERE id = 5; </b> - Selecionar tudo de produtos onde o id seja igual a 5 </p>  <br/>
+                <p> <b> SELECT * FROM usuarios WHERE nome = "Pedro" ;</b> - Selecionar tudo de usuarios onde o nome for igual a Pedro. (<b> Aqui é importante o uso das aspas </b> ) </p> <br/>
+                <br/>
+
+                <h2> SQL Where AND/OR e operadores </h2> <br/>
+                <p> <b> SELECT * FROM produtos WHERE preco > 150; </b> - Levantamento dos produtos onde o preço é maior do que 150 </p> <br/>
+                <p> <b> SELECT * FROM produtos WHERE preco <= 500; </b> - Levantamento dos produtos onde o preço é menor ou igual a 500 </p> <br/>
+                <p> <b> SELECT * FROM produtos WHERE preco != 200; </b>- Levantamento de produtos onde o preço não é igual a 200. ou seja, todos os produtos com excessão dos que custarem exatamente 200. </p> <br/>
+                <p> <b> SELECT * FROM produtos WHERE estoque > minestoque; </b>- Levantamento dos produtos onde o estoque é maior do que o estoque minimo.</p> <br/>
+                <p> <b> SELECT * FROM produtos WHERE preco = 200 OR preco 149; </b>- Levantamento dos produtos em que o preço seja igual a 200 ou quando o preço for igual a 149.</p> <br/>
+                <p> <b> SELECT * FROM produtos WHERE preco > 150 AND preco = 1000 </b> - Levantamento dos produtos onde o preco seja maior do que 150 e que o preco seja igual a 1000.</p> <br/>
+                <p> <b> SELECT * FROM produtos WHERE (preco > 150 AND PRECO < 1000) OR id_fornecedor = 6</b> Levantamento dos produtos em que o preço é maior do que 150 e que o preço seja menor do que 1000, ou que possuam id_fornecedor - 6 <b>(Aqui é importante o uso de () para separar a ordem das opereções</b></p> <br/>
+
+                <h2> SQL Where Like </h2> <br/>
+                <p> <b> SELECT * FROM usuarios WHERE nome LIKE "Wesley%"  ; </b> - Levantamento de usuários que comecem com o nome Wesley </p> <br/>
+                <p> <b> SELECT * FROM usuarios WHERE nome LIKE "%Volpato"  ; </b> - Levantamento de usuários que o nome termine com volpato </p> <br/>
+                <p> <b> SELECT * FROM usuarios WHERE nome LIKE "%Volpato%"  ; </b> - Levantamento de usuários que possuam "volpato" no nome </p> <br/>
+                <p> <b> SELECT * FROM produtos WHERE nome LIKE "Teclado%"  ; </b> - Levantamento dos produtos que comecem com o nome "teclado" </p> <br/>
+
+                <h2> SQL Where Between e IN </h2> <br/>
+                <p> <b> SELECT * FROM produtos WHERE estoque BETWEEN 5 AND 10; </b>- Levantamento de produtos em que o estoque esta entre 5 e 10 </p> <br/>
+                <p> uma forma alternativa a esse comando seria com a utilização do <b>AND</b> </p><br/>
+                <p> <b>SELECT * FROM produtos WHERE estoque >= 5 AND estoque <= 10; </b>- Ou seja, produtos que sejam maior ou igual a 5 e que sejam menor ou igual a 10  </p> <br/>
+                <p> <b> SELECT * FROM produtos  WHERE id_fornecedor IN  (1, 6, 3); </b> - Levantamento dos produtos onde o id de fornecedor esteja dentro da seguinte lista (1, 6, 3) </p> <br/>
+                <p> Uma forma alternativa a esse comando seria utilizando o <B>OR</B> </p> <BR/>
+                <p> <b> SELECT * FROM produtos WHERE id_fornecedor = 1 OR id_fornecedor = 6 OR id_fornecedor = 3; </b> - Levantamento de produtos em que o id_fornecedor seja 1, 6 ou 3. </p> <br/>
+
+                <h2> SQL Order By </h2> <br/>
+                <p> Comando utilizado para ordenar um resultado. É importante que a condição venha primeiro e por ultimo o order by, caso contrario da erro de sintaxe.</p> <br/>
+                <p> <b> SELECT * FROM produtos ORDER BY estoque  DSC, nome ASC; </b> - Levantamento dos produtos do estoque por ordem descendente e por ordem alfabetica.  </p> <br/>
+
+                <h2> SQL Limit </h2> <br/>
+                <p>Esse comando serve para limitar o resultado.</p> <br/>
+                <p> <b> SELECT * FROM produtos LIMIT 5; </b> - Levantamento dos produtos com limite de resultado em 5.</p> <br/>
+                <p> <b> SELECT * FROM produtos ORDER BY preco DESC LIMIT 4; </b> - Levantamento dos preços dos produtos ordenados por ordem decrescente (do mais caro para o mais barato) com limite de visualização de resultados para 4 itens. </p> <br/>
+                <p> <b> SELECT * FROM produtos LIMIT 1, 3</b> -Levantamento dos produtos pulando um item, começa do segundo item com limite de mostrar 3 resultados. Ex. 10, 12; pula 10 itens e mostra o apenas os 12 itens seguintes. </p> <br/>
+                <p> <b> SELECT * FROM produtos WHERE id_fornecedor = 6 ORDER BY estoque DESC LIMIT 0,3; </b> - Levantamento dos produtos em que o id_fornecedor seja igual a 6, ordenando por estoque de valor maior para o menor, com limite de resultados pulando o 0 e mostrando os 3 seguintes. </p> <br/>
+
+                <h2> SQL Count, Avg e Sum </h2> <br/>
+                <p> Esses comandos são utilizados para fazer contagem, média e soma dos resultados. Veja exemplos: </p> <br/>
+                <p> <b> SELECT COUNT(*) FROM produtos WHERE id_fornecedor = 6 ; </b>- Levantamento da CONTAGEM dos produtos onde o id de fornecedor é igual a 6 </p> <br/>
+                <p> <b> SELECT AVG(preco) FROM produtos WHERE PRECO >= 1000; </b> - Levantamento da media dos preços dos produtos, onde o preço dos itens é maior ou igual a 1000.  </p> <br/>
+                <p> <b> SELECT SUM(estoque) FROM produtos; </b> - Levantamento da soma de produtos do estque </p> <br/>
+    
+            </section>
+
+
+
+
+
+
+
+
+
+
+            </body>
+            <footer>
+                <h1>Projeto desenvolvido por <a href="http://github.com/andressasmartins" target="blank"> Andressa Martins </a> </h1>
+                <h2>Atualizado em <b>Março de 2022</b></h2>
+                <p>Contato: <a href="mailto:x.andressamartins@gmail.com" target="blank">x.andressamartins@gmail.com</address></p>
+        
+            </footer>
+        </html>

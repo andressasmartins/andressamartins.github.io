@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,user-scalable=0"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+        <title>Introdução ao Css</title>
+    </head>
+    <body>
+        <header>
+            <h1>Introdução ao Css</h1>
+            <h2> por Andressa Martins</h2>
+        </header>
+        <main>
+            <h1> <b> indice: </b> <a href="#">Herança</a>, <a href="#">Especifidade</a>, <a href="#">Cascata</a>, <a href="#">propriedades padrão</a>, <a href="#">Width e Height</a>, <a href="#">Formatação de textos</a>, <a href="#">Importar fontes </a>
+        </main>
+        <article>
+
+            <section>
+
+                <h1>Caracteristicas do CSS</h1> 
+                <h2>Herança</h2> <br/>
+                <p>Ao fazer estilizações é preciso se atentar as heranças de estilizações. Como muitas tags normalmente ficam dentro de outras, pode ser que ao aplicar um efeito sobre uma determinada tag, as outras tags que estejam dentro dela ou que se repitam no html, herdem os mesmos efeitos. </p>
+                <p> Dessa forma, para alterar tags especificas sem querer que as outras dentro dela ou iguais a ela fiquem com as mesmas caracteristicas, é possivel fazer o uso de id, class, ou aplicar o efeito especificamente na tag em especifico que você deseja alterar.</p> <br/>
+
+                <h2>Especificidade</h2> <br/>
+                <p>Quanto mais especifico voce for para identificar onde voce quer colocar o efeito, o CSS reconhece como prioridade para a aplicação dos estilos. Por exemplo: <br/><br/>
+                <p>body div.1 p { <br/>
+                    color: red; <br/>
+                } <br/>
+                e <br/>
+                p {<br/>
+                    color:blue <br/>
+                } <br/>
+                </p>
+                <br/>
+
+                <p> Nesse exemplo, a primeira definição ganha prioridade, por estar mais especificada, então a cor a ser aplicada vai ser o red, e não o blue. </p><br/>
+                </p>
+                <h2>Cascata</h2> <br/>
+                <p>No Css, a ultima propriedade aplicada é a que ganha prioridade. Então a ordem de aplicação é a seguinte: Primeiro o Css aplica os efeitos do css externo, depois aplica os efeitos do css do style dentro do html, e por ultimo ele aplica os efeitos do css inline, diretamente onde esta sendo aplicado. Dessa forma, quando existir as tres formas de css e que apresentem informações distintas, a informação que vai ganhar prioridade da estilização sera o que esta no style do css inline, que é mais especifico. Dessa forma, é mais garantido que o efeito sera aplicado. </p>
+    
+            </section>
+
+            <section>
+              
+                <h1> Algumas propriedades padrão para configurar o CSS da página</h1>
+                <p> Coloca-se essa configuração para definir que o tamanho de um elemento (div) é definido pelo conteudo, padding e border, então o tamanho do padding e do border é subtraido do widht/height  total definido. </p> <br/>
+                <p><strong> * { <br/>
+                    box-sizing: border-box; <br/>
+                    } </strong>
+                </p> <br/>
+                <p>Coloca-se essa configuração para redefinir a margem da pagina em 0px, dessa forma, as margins e padding são definidos exatamente pelos valores que se colocar no css. </p> <br/>
+                <p><strong> body { <br/>
+                    margin: 0px; <br/>
+                    } </strong> 
+                </p></p>
+
+                <h1> Widht e Height no CSS</h1>
+                <p> Normalmente os valores são definidos em porcentagem ou em pixel. widht auto pega o tamanho original de uma imagem ou preenche a div na largura da tela toda. Quando colocar como valor inherit, o tamanho é herdado da imagem anterior. É possivel também se definir tamanhos maximos e minimos max-width e min-width, nesses casos, essa definição ganha prioridade.</p> <br/>
+
+            </section>
+
+            <section>
+
+                <h1>Formatação de texto em CSS</h1>
+                <p> <strong> As propriedades abaixo podem mudar a formatação de textos em qualquer tag </strong> </p> <br/>
+                    <p> <b>color:</b> red; - Para mudar a fonte de cor </p> <br/>
+                    <p> <b>font-size:</b> 20px; - Para definir o tamanho da fonte </p> <br/>
+                    <p> <b>font-weight: </b> normal ou bold; - Para colocar a fonte em negrito ou normal </p> <br/>
+                    <p> <b>font-family:</b> helvetica, arial, serif; - Para definir a fonte a ser utilizada e fontes alternativas para o navegador utilizar em sua ausencia. </p> <br/>
+                    <p> <b>text-align:</b> left, center, right, justify; - Para definir o alinhamento do texto </p> <br/>
+                    <p> <b>text-decoration:</b> none, <u>underline</u>, overline (sublinhado acima) , <del>line-through;</del> - Para definir riscos e sublinhado no texto. </p> <br/>
+                    <p> <b>text-transform: uppercase ou lowercase;</b> - Para colocar o texto todo em caixa alta ou caixa baixa </p><br/>
+                    <p> <b>letter-spacing: 5px</b> - Para colocar um espaçamento maior ou menor entre as letras. </p><br/>
+                    <p  <b>word-spacing: 5px</b> - Para aumentar ou diminuir o espaçamento entre palavras </p><br/>
+                    <p> <b>line-height: 30px</b> - Para aumentar ou diminuir o espaçamento entre linhas </p><br/>
+                    <p> <b>text-shadow: 0px(direita) 2px(baixo) 3px(quão esfumaçado) red </b> - Usado para fazer efeito de sombreamnto. </p><br/>
+                    <br/>
+
+                    <p><b>Dica para retirar o sublinado dos links e só aparecer ao passar o mouse em cima:</b></p> <br/>
+                    <p> a { <br/>
+                        text-decoration: none; <br/>
+                    } <br/>
+                    a:hover { <br/>
+                        text-decoration:underline <br/>
+                    } 
+                    </p>
+
+            </section>
+
+            <section>
+
+                    <h1>Como importar fontes de letras pela internet</h1>
+                    <p>Quando for utilizar uma fonte que pode não ser tão comum a todos os navegadores ou quando quiser uma fonte com estilo mais diferente, é possivel importar fontes externas de sites da internet como o googlefonts. Para inclui-la é necessário seguir esses passos: </p> <br/>
+                    <p>Depois de acessar o site e copiar o link para importação é preciso colar o link no < head> assim como o link de arquivo.css. Dessa forma, fica assim: </p> <br/>
+                   <p> < head> <br/>
+                        < meta charset="UTF-8"/> <br/>
+                        < title> titulo da pagina < /title> <br/>
+                        < link rel="stylesheet" href="arquivo.css" /> <br/>
+                        < link rel="preconnect" href="https://fonts.googleapis.com"> <br/>
+                        < link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <br/>
+                        < link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> <br/>
+                    < /head> </p> <br/>
+                    <p> A fonte acima a ser importada foi a "roboto" regular400, italic400 e bold700 e no site as especificações para utiliza-la no CSS são as seguintes: </p> <br/>
+                    CSS rules to specify families <br/>
+                    font-family: 'Roboto', sans-serif; </p><br/>
+                    <p> A seguir uma demonstração da fonte: </p><br/>
+                    <p>
+                    <p id="robreg">Fonte roboto regular</p>
+                    <p id="robita"> <em>Fonte roboto italico</em></p>
+                    <p id="robbol"><strong>Fonte roboto negrito</strong></p>
+                    </p>
+
+            </section>
+
+            <section>
+
+
+            </section>
+
+
+        </body>
+        <footer>
+            <h1>Projeto desenvolvido por <a href="http://github.com/andressasmartins" target="blank"> Andressa Martins </a> </h1>
+            <h2>Atualizado em <b>Março de 2022</b></h2>
+            <p>Contato: <a href="mailto:x.andressamartins@gmail.com" target="blank">x.andressamartins@gmail.com</address></p>
+    
+        </footer>
+    </html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no"/>
+        <title>CSS</title>
+        <link rel="stylesheet" href="CSS.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="div1">
+            <a href="site de estudo.html" title="logo do site">
+                <img class="logo" src="C:\Users\marti\OneDrive\Desktop\Codigos HTML\pngitem.png" alt="logo do site">
+             </a>
+            <div>
+                Site de Estudos
+            </div>
+        </div>
+        <div class="div2">
+            <a href="Site de estudo.html" target="_blank" title="Ir para a página inicial">
+                                <button>Início</button>
+            </a>
+            <a href="Site dos gatos.html" target="_blank" title="Site de imagens de gatos">
+                                <button>Gatos</button>
+            </a>
+            <a href="HTML.html" target="_blank" title="Informações sobre HTML" >
+                                <button>HTML</button>
+            </a>
+            <a href="CSS.html" target="_blank" title="Informações sobre CSS" >
+                                <button>CSS</button>
+            </a>
+            <a href="login.html" target="_blank" title="Fazer login" >
+                <button>Login</button>
+            </a>
+        </div>
+        <div class="div3">
+
+            <h1>Widht e Height no CSS</h1>
+            <p>Normalmente os valores são definidos em porcentagem ou em pixel. widht auto pega o tamanho original de uma imagem ou preenche a div na largura da tela toda. Quando colocar como valor inherit, o tamanho é herdado da imagem anterior. É possivel também se definir tamanhos maximos e minimos max-width e min-width, nesses casos, essa definição ganha prioridade.</p>
+
+            <h1> Algumas propriedades padrão para configurar o CSS da página</h1>
+            <p>Coloca-se essa configuração para definir que o tamanho de um elemento (div) é definido pelo conteudo, padding e border, então o tamanho do padding e do border é subtraido do widht/height  total definido. </p>
+            <p><strong> * { <br/>
+                box-sizing: border-box; <br/>
+                } </strong>
+            </p>
+            <p>Coloca-se essa configuração para redefinir a margem da pagina em 0px, dessa forma, as margins e padding são definidos exatamente pelos valores que se colocar no css. </p>
+            <p><strong> body { <br/>
+                margin: 0px; <br/>
+                } </strong> 
+            </p>
+
+            <h1>Formatação de texto em CSS</h1>
+            <p> <strong> As propriedades abaixo podem mudar a formatação de textos em qualquer tag </strong> <br/>
+                    <b>color:</b> red; - Para mudar a fonte de cor <br/>
+                    <b>font-size:</b> 20px; - Para definir o tamanho da fonte <br/>
+                    <b>font-weight: </b> normal ou bold; - Para colocar a fonte em negrito ou normal <br/>
+                    <b>font-family:</b> helvetica, arial, serif; - Para definir a fonte a ser utilizada e fontes alternativas para o navegador utilizar em sua ausencia. <br/>
+                    <b>text-align:</b> left, center, right, justify; - Para definir o alinhamento do texto <br/>
+                    <b>text-decoration:</b> none, <u>underline</u>, overline (sublinhado acima) , <del>line-through;</del> - Para definir riscos e sublinhado no texto. <br/>
+                    <b>text-transform: uppercase ou lowercase;</b> - Para colocar o texto todo em caixa alta ou caixa baixa <br/>
+                    <b>letter-spacing: 5px</b> - Para colocar um espaçamento maior ou menor entre as letras. <br/>
+                    <b>word-spacing: 5px</b> - Para aumentar ou diminuir o espaçamento entre palavras <br/>
+                    <b>line-height: 30px</b> - Para aumentar ou diminuir o espaçamento entre linhas <br/>
+                    <b>text-shadow: 0px(direita) 2px(baixo) 3px(quão esfumaçado) red </b> - Usado para fazer efeito de sombreamnto. <br/>
+                <br/>
+                <b>Dica para retirar o sublinado dos links e só aparecer ao passar o mouse em cima:</b> <br/>
+                <b>a { <br/>
+                    text-decoration: none; <br/>
+                } <br/>
+                a:hover { <br/>
+                    text-decoration:underline <br/>
+                } </b>
+                </p>
+                <h1>Como importar fontes de letras pela internet</h1>
+                <p>Quando for utilizar uma fonte que pode não ser tão comum a todos os navegadores ou quando quiser uma fonte com estilo mais diferente, é possivel importar fontes externas de sites da internet como o googlefonts. Para inclui-la é necessário seguir esses passos: <br/>
+                Depois de acessar o site e copiar o link para importação é preciso colar o link no < head> assim como o link de arquivo.css. Dessa forma, fica assim: <br/>
+                < head> <br/>
+                    < meta charset="UTF-8"/> <br/>
+                    < title> titulo da pagina < /title> <br/>
+                    < link rel="stylesheet" href="arquivo.css" /> <br/>
+                    < link rel="preconnect" href="https://fonts.googleapis.com"> <br/>
+                    < link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <br/>
+                    < link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> <br/>
+                < /head> <br/>
+                A fonte acima a ser importada foi a "roboto" regular400, italic400 e bold700 e no site as especificações para utiliza-la no CSS são as seguintes: <br/>
+                CSS rules to specify families <br/>
+                font-family: 'Roboto', sans-serif; <br/>
+                A segui uma demonstração da fonte: <br/>
+                <p>
+                <p id="robreg">Fonte roboto regular</p>
+                <p id="robita"> <em>Fonte roboto italico</em></p>
+                <p id="robbol"><strong>Fonte roboto negrito</strong></p>
+                </p>
+            
+            <h1>  Formatação de tabelas no CSS</h1>
+            <p>O primeiro passo é retirar as configurações de estilização da tabela do html, para deixa-la "limpa" para estilizar somente com o CSS, dessa forma, é preciso deixar assim: < table border="0" >. Veja abaixo o exemplo de uma tabela estilizada pelo CSS e algumas das possiveis propriedades que podem ser utilizadas.</p>
+
+            <table border="0">
+                <thead>
+                    <tr>
+                        <th>Item 1</th>
+                        <th> Item 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>8</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Para a estilização da tabela acima foram utilizadas as seguintes propriedades:</p>
+            table { <br/>
+                width: 600px; <br/>
+                border: 3px dotted darkcyan; <br/>
+                margin: auto; - <b>para centralizar a tabela na tela</b> <br/>
+             } <br/>
+             td { - <b>usa essa tag para estilizar as linhas das colunas </b> 
+                border-left: 1px solid darkcyan;  - <b>para deixar as linhas com bordas apenas verticais</b> <br/>
+                border-right: 1px solid darkcyan  - <b>para deixar as linhas com bordas apenas verticais</b> <br/>
+             } <br/>
+             th { - <b>usa essa tag para estilizar as colunas da linha somente do cabeçalho </b> <br/>
+                border: 5px double teal; <br/>
+                background-color: lightskyblue; <br/>
+                text-align: center; <br/>
+                font-size: 20px; <br/>
+                font-family: roboto; <br/>
+             } <br/>
+             tbody { -  <b>usa-se essa tag para estilizar somente o corpo da tabela</b> <br/>
+                background-color: mediumaquamarine; <br/>
+                text-align: center; <br/>
+                font-family: roboto; <br/>
+             } <br/>
+             th,td { - linha e coluna <br/>
+                padding: 10px; <br/>
+             } <br/>
+             tbody tr:nth-child(even) { - <b>para aplicar somente nos numeros pares das linhas </b> <br/>
+                background-color: lightseagreen; <br/>
+             } <br/>
+             tbody tr:hover { <br/>
+                background-color: lightskyblue; - <b>para aplicar efeito ao passar o mouse. Importante: essa tag precisa estar abaixo da tag de numeros pares/impares, para poder ser aplicada em todas as linhas. </b> 
+             }<br/>
+
+            </p>
+            <h1>Formatando Formulários no CSS</h1>
+            <p> Através do CSS é possivel estilizar os formulários, veja abaixo um exemplo das possibilidades de estilização. <br/> <br/>
+                <form action="login.html" method="POST" >
+
+                <label>
+                    Nome completo: <br/>
+                    <input class="inputmaior" type="text" name="nome"/>
+                </label>
+
+                <label>
+                    E-mail: <br/>
+                    <Input class="inputmaior" type="email" name="email"/>
+                </label>
+
+                <label>
+                    Data de nascimento:
+                    <Input type="date" name="data"/>
+                </label>
+
+                <label>
+                    Telefone:
+                    <Input type="tel" name="telefone"/>
+                </label>
+
+                <label>
+                    Celular:
+                    <Input type="tel" name="celular"/>
+                </label>
+
+                <label>
+                    RG:
+                    <Input type="number" name="rg"/>
+                </label>
+
+                <label>
+                    CPF:
+                    <Input type="number" name="cpf"/>
+                </label>
+
+                <label>
+                    Sexo:
+                    <Input type="radio" name="sexo"/> Indefinido
+                    <Input type="radio" name="sexo"/> Masculino
+                    <Input type="radio" name="sexo"/> Feminino
+                </label>
+
+                <label>
+                    Endereço:<br/>
+                    <Input class="inputmaior" type="text" name="endereço"/>
+                </label>
+
+                <label>
+                    Cidade:
+                    <Input type="text" name="cidade"/>
+                </label>
+
+                <label>
+                    Estado:
+                    <select name="Estado">
+                        <option>SP</option>
+                        <option>RJ</option>
+                        <option>MG</option>
+                        <option>PR</option>
+                        <option>SC</option>
+                        <option>RS</option>
+                        <option>ES</option>
+                        <option>MT</option>
+                        <option>GO</option>
+                    </select>
+                </label>
+
+                <label>
+                    Melhor horario para contato: <br/>
+                    <Input type="time" name="horario"/>
+                </label>
+
+                <label>
+                    Escreva sua mensagem aqui: <br/>
+                    <textarea name="mensagems"></textarea>
+                </label>
+
+                <label>
+                    <Input type="checkbox" name="termosdeuso"/>
+                    Declaro que li e aceito os <a href="http://google.com" target="blank" title="Ler os termos de uso" class="termoslink">Termos de uso </a>
+                </label>
+
+                <label id="confirmar">
+                    Confirmar e enviar: <br/>
+                    <button>OK</button>
+                </label>
+                <br/> <br/>
+            Para conseguir os resultados acima, foram utilizadas as seguintes estilizações: <br/> <br/>
+            form {<br/>
+                font-family: roboto;<br/>
+             }<br/>
+             label {<br/>
+                display:block;<br/>
+                margin-bottom: 10px;<br/>
+             }<br/>
+             input{<br/>
+                padding: 5px;<br/>
+                font-size: 16px;<br/>
+                font-family: roboto;<br/>
+                border: 3px dotted teal;<br/>
+                color: rgb(2, 107, 107);<br/>
+                font-weight: bold;<br/>
+                background-color: rgba(0, 139, 139, 0.274);<br/>
+                outline: 0px;<br/>
+             
+             }<br/>
+             .inputmaior {<br/>
+             width: 300px;<br/>
+             }<br/>
+             textarea {<br/>
+                font-family: roboto;<br/>
+                width: 450px;<br/>
+                height: 225px;<br/>
+                border: 3px dotted teal;<br/>
+                background-color: rgb(146, 180, 224);<br/>
+                resize: none;<br/>
+                color: rgb(2, 107, 107);<br/>
+                font-weight: bold;<br/>
+                padding: 5px;<br/>
+                font-size: 18px;<br/>
+                outline-color: teal;<br/>
+             
+             }<br/>
+             select {<br/>
+                padding: 5px;<br/>
+                font-size: 16px;<br/>
+                font-family: roboto;<br/>
+                border: 3px dotted teal;<br/>
+                color: rgb(2, 107, 107);<br/>
+                font-weight: bold;<br/>
+                background-color: rgba(0, 139, 139, 0.274);<br/>
+                outline-color: teal;<br/>
+                
+             }<br/>
+             
+             .termoslink {<br/>
+                color: black;<br/>
+                text-decoration: none;<br/>
+             
+             }<br/>
+             
+             .termoslink:hover {<br/>
+                text-decoration: underline;<br/>
+                color: darkcyan;<br/>
+                
+             }<br/>
+             .termoslink:visited {<br/>
+                color: darkmagenta;<br/>
+             }<br/>
+             
+             .div3 #confirmar {<br/>
+                padding-top:30px;<br/>
+                text-align: center;<br/>
+             }<br/>
+             .div3 #confirmar button {<br/>
+                padding: 5px 15px 5px 15px;<br/>
+                font-size: 16px;<br/>
+                font-family: roboto;<br/>
+                border: 3px double teal;<br/>
+                color: rgb(2, 107, 107);<br/>
+                font-weight: bold;<br/>
+                background-color: rgba(0, 139, 139, 0.274);<br/>
+             }<br/>
+             .div3 #confirmar button:hover {<br/>
+                background-color: rgb(46, 155, 155);<br/>
+                opacity: 90%;<br/>
+             }<br/>
+
+            <b>Placeholder, Autofocus e Maxlenght</b>
+            <br/><br/>
+            Atraves do placeholder é possivel escrever dentro da caixa de texto a instrução sobre o que deve ser preenchido. <br/>
+            Através do autofocus é possivel deixar ativo o campo de texto automaticamente para o uruário escrever sem precisar clicar como mouse.<br/>
+            Através do maxlenght ou minlenght é possivel definir um tamanho maximo ou minimo de caracteres permitidos no campo.<br/>
+            Através do min e max, é possivel definir um valor maximo em numeros permitido no campo de texto.<br/>
+            Veja exemplos:
+            <br/><br/>
+
+            < label><br/>
+                Nome completo: <br/>
+                < input class="inputmaior" type="text" name="nome" <b>placeholder="Nome completo" autofocus maxlenght="5"/></b><br/>
+            < /label><br/>
+            <br/><br/>
+            <label>
+                Nome completo: <br/>
+                <input class="inputmaior" type="text" name="nome" placeholder="Nome completo" autofocus maxlength="5"/>
+            </label>
+
+            </form>
+            </p>
+            <h1>Caracteristicas do CSS</h1>
+            <h2>Herança</h2>
+            <p>Ao fazer estilizações é preciso se atentar as heranças de estilizações. Como muitas tags normalmente ficam dentro de outras, pode ser que ao aplicar um efeito sobre uma determinada tag, as outras tags que estejam dentro dela ou que se repitam no html, herdem os mesmos efeitos. Dessa forma, para alterar tags especificas sem querer que as outras dentro dela ou iguais a ela fiquem com as mesmas caracteristicas, é possivel fazer o uso de id, class, ou aplicar o efeito especificamente na tag em especifico que você deseja alterar como a tag <strong id="strongred">< strong id="strongred"> Em negrito e vermelho < /strong></strong> . Nesse exemplo, foi alterada as especificações somente do texto dentro do strong e para isso foi utilizada a seguinte estilização no CSS: <br/>
+                .div3 #strongred { <br/>
+                    color: red;<br/>
+                 }<br/>          
+            </p>
+            <h2>Especificidade</h2>
+            <p>Quanto mais especifico voce for para identificar onde voce quer colocar o efeito, o CSS reconhece como prioridade para a aplicação dos estilos. Por exemplo: <br/><br/>
+            body div.1 p { <br/>
+                color: red; <br/>
+            } <br/>
+            e <br/>
+            p {<br/>
+                color:blue <br/>
+            } <br/>
+<br/>
+            Nesse exemplo, a primeira definição ganha prioridade, por estar mais especificada, então a cor a ser aplicada vai ser o red, e não o blue. <br/>
+            </p>
+            <h2>Cascata</h2>
+            <p>No Css, a ultima propriedade aplicada é a que ganha prioridade. Então a ordem de aplicação é a seguinte: Primeiro o Css aplica os efeitos do css externo, depois aplica os efeitos do css do style dentro do html, e por ultimo ele aplica os efeitos do css inline, diretamente onde esta sendo aplicado. Dessa forma, quando existir as tres formas de css e que apresentem informações distintas, a informação que vai ganhar prioridade da estilização sera o que esta no style do css inline, que é mais especifico. Dessa forma, é mais garantido que o efeito sera aplicado.
+            </p>
+
+            <h2>Unidades de medida absoluta no CSS</h2>
+            <p>
+                Unidades de medida absoluta são imutaveis e invariaveis, dessa forma não sofrer modificações ou interferencias. Para definir os tamanhos no CSS é possivel utilizar as seguintes formas: <br/>
+                    Pixel = px - a forma mais utilizada, para definir tamanhos em pixel. <br/>
+                    Pontos = pt - utilizado normalmente em tamanhos de fontes. <br/>
+                    polegadas = in - para definir tamanho em polegadas <br/>
+                    centimetro = cm - utilizado para definir o tamanho em centimetros <br/>
+                    milimetros = ml - utilizado para definir tamanho em milimetros <br/>
+            </p>
+
+            <h2>Unidades de medida relativas a fonte</h2>
+            <p>
+                Unidades de medida relativas a fonte mudam de tamanho, baseadas em tamanhos de outros elementos existentes na pagina, são proporcionais a outra medida estabelecida anterioremente. Veja os exemplos:<br/><br/>
+
+                < div class="divmed1"><br/>
+                    < div class="divmed2"><br/>
+                        Conteudo dentro da divmed2<br/>
+
+                    < /div><br/>
+                < /div><br/><br/>
+
+                <b>CSS aplicado nessas divs: Uso da unidade de medida "em"</b><br/><br/>
+
+                .divmed1 {<br/>
+                    font-size: 40px<br/>
+                }<br/>
+                .divmed2 {<br/>
+                    width: 10em;<br/>
+                    height: 10em;<br/>
+                    Color: #CCC;<br/>
+                }<br/>
+                <br/>
+                Nesse exemplo, a primeira definição de tamanho foi o tamanho da fonte na divmed1. Dessa forma, as medidas relativas, vão utilizar como parametro essa medida para então proporcionalizar outros elementos da pagina de acordo com os 40px dessa primeira configuração. Nesse caso, 1em equivale a 40px, 2em = 80px, 3em = 120px, 10em = 400px e assim por diante. Mas é importante ressaltar que a medida utilizada como parametro é sempre a medida <b>anterior</b>> então os valores de 1em vão mudando ao longo da pagina, porque utilizam como parametro o valor anterior que ja foi "modificado". Exemplo:
+                <br/><br/>
+                .divmed1 {<br/>
+                    font-size: 40px<br/>
+                }<br/>
+                .divmed2 {<br/>
+                    width: 10em; = 400px<br/>
+                    height: 10em;<br/>
+                    Color: #CCC;<br/>
+                }<br/>
+                p {<br/>
+                    font-size: 10em; = 4000px = 400*10, porque o valor estabelecido anteriormente foi equivalente a 400px<br/>
+                     ou font-size: 1em; = 400px, porque o valor anterior utilizado foi equivalente a 400px.<br/>
+                }<br/><br/>
+                Percebe-se que dessa forma existe um efeito cascta por toda a pagina em que uma medida altera a proporcão para definir a proxima medida.
+                <br/><br/>
+                <b>Agora veja o CSS aplicado nas mesmas divs, com o uso da unidade de medida "rem"</b><br/><br/>
+                Ao utilizar a unidade de medida rem, ela é utilizada como parametro em todo o site. Para defini-la como parametro, é preciso colocar ela na raiz do codigo, ou seja, é preciso aplica-la na tag do html. Ou, se não estabelecido o seu valor, por padrão 1rem  equivale a 16px.
+                <br/><br/>
+                html {<br/>
+                    fontsize: 10px<br/>
+                }<br/>
+                .divmed1 {<br/>
+                    font-size: 4rem; = 4*10px = 40px<br/>
+                }<br/>
+                .divmed2 {<br/>
+                    width: 40rem; = 40*10px = 400px<br/>
+                    height: 20rem; = 20*10px = 200px<br/>
+                    Color: #CCC;<br/>
+                }<br/><br/>
+                Note que dessa forma, é mantida a porporção de forma fixa, baseando sempre na definição do html. Então o valor de 1rem vai ser sempre o mesmo que o valor absoluto estabelecido na tag do html. Dessa forma, garante-se uma maior esponsividade do site, uma vez que se torna totalmente proporcional e que alterando o valor do fontsize do html, voce consegue alterar os valores da pagina toda poporcionalmente, como se fosse um zoom em toda a pagina, que altera seu tamanho em conjunto.
+            </p>
+            <h2>Porcentagem, ch, ex</h2>
+            <p>Porcentagem define o tamanho baseado em seu espaço livre para uso. Não é o espaço total da tela, e sim o espaço disponivel para o elemento em especifico. <br/>
+            ch, é utilizado em fonte monospace, em que todas as letras ocupam o mesmo tamanho. então o tamanho é definido pelo numero de caracteres dessa fonte monospace. <br/>
+            Ex  é utilizado para definir o espaço de acrodo com o tamanho do "x" do caractere, é similar ao ch.
+            </p>
+
+            <h2>Unidades de medida viewport - Vh, Vw, Vmin, Vmax</h2>
+            <p>Funciona similiar a proporcão, só que utilizando o real espaço total da tela como parametro.
+            </p>
+
+            <h2>inherit</h2>
+            <p>Pede para estabelecer como valor a mesma configuração aplicada anteriormente em um lugar especifico. pode ser utilizado pra colocar o mesmo tamanho de fonte de um item anterior, ou cor, ou tamanho de imagem, etc. <br>
+                <br>
+            .box {<br>
+                fontsize:20px;<br>
+                color:red;<br>
+                <br>
+            }<br>
+            h1 {<br>
+                fontsize: 30px;<br>
+                color: blue;<br>
+                <br>
+            }<br>
+            .box h1 {<br>
+                fontsize: inherit - Aqui está forçando o h1 a ter as configurações herdadas do .box<br>
+                Color: inherit - Aqui está forçando o h1 a ter as configurações herdadas do .box<br>
+                <br>
+            }<br>
+
+            </p>
+
+            <h1> Responsividade </h1>
+            <p> Responsividade diz respeito a como as configurações da pagina são adaptaveis aos diferentes formados de dispositivos e tamanhos de tela.
+            </p>
+
+            <h2> Mobile First</h2>
+            <p>Com a ascensão do uso de disposiivos celulares, utilizava-se essa expressão para definir que deveria ser feito os codigos da pagina pensando primeiramente em como esses codigos aparentariam e performariam nos celulares, e somente depois, adaptar o codigo ao navegador. Contudo, foram identificados alguns problemas ao fazer isso, principalmente no que diz respeito as limitações que os dispositivos moveis apresentam na hora de performar os codigos da pagina. Dessa forma, hoje em dia não se faz mais isso, mas o conceito é utilizado para levar em conta a importancia de se pensar em como os os codigos da pagina podem ser adaptados para outros dispostivos também.</p>
+            
+            <h2>Layout Responsivo x Adaptativo</h2>
+            <p>Layout não responsivo:<br>
+                Nesse tipo de layout, as configurações do site não se adaptam ao tamanho da tela, então o mesmo layout do navegador é o que aparece em outros tipos de dispositivos ou tamanhos de tela. <br>
+                Layout Responsivo: <br>
+                Nesse tipo de Layout, existe uma adaptabilidade fluida, flexivel e "automatica" aos diferentes tamanhos de tela, os tamanhos não são fixos e sim flexiveis.<br>
+                Layout Adaptativo: <br>
+                Nesse tipo de Layout, são definidas configurações de tamanhos no site diferentes para os diferentes tamanhos de tela. Existe uma adaptabilidade de acordo com uma "faixa" de tamanho de tela. Então a responsividade é baseada em qual o tamanho da tela e qual configuração cabe nesse tamanho de tela. Não é fluido. <br>
+                O ideal é misturar as formas de layout adaptativo com responsivo.<br>
+                <br>
+                Tamanhos de telas <br>
+                320 celular normal <br>
+                480 celulares notes <br>
+                760 tablets <br>
+                960 monitores menores <br>
+                1200 monitor fullhd normal <br>
+                1600 monitor fullhd, 4k maior. <br>
+                <br>
+                O ideal seria fazer 3 layouts adaptativos com responsividade para outras faixas de tamanho de tela. exemplo: <br>
+                <br>
+                960 responsivo para até 1200/1600
+                760 responsivo para até 959
+                320 responsivo para até 759
+
+            </p>
+            <h2>Viewport</h2>
+            <p> O viewport é a área onde seu website aparece. É a área branca da janela quando você abre o browser. O viewport sempre vai ter o tamanho da janela. Mas a forma como os elementos são renderizados vai depender do dispositivo.
+               Para garantir que o layout da tela seja responsivo para os diferentes tipos de dispositivos e telas, é preciso colocar uma tag no head do html. veja abaixo:<br/>
+            <br/>
+                < meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+                <br/>
+                ou
+                <br/>
+                < meta name="viewport" content="width=device-width", uderscalable="no"> - Para que não seja permitido que o usuário dê zoom na tela.
+            </p>
+            <h2>Imagens Responsivas: TAGS picture e source</h2>
+            <p> Para  fazer com que as imagens da pagina mudem conforme o tamanho da tela, utiliza-se as seguintes tags que especificam quais as condições de tamanho de tela devem ser levadas em conta para carregar uma ou outra imagem, de acordo com o seu tamanho. <br/>
+<br/>
+                    < picture><br/>
+                        < source media="(min-width: 650px)" srcset="img3.png"/><br/>
+                        < source media="(min-width: 450px)" srcset="img2.jpg" /><br/>
+                        < img src="img1.png"/><br/>
+                    < /picture><br/>
+            </p>
+            <h2>Imagens Responsivas: Propriedade Object-fit</h2>
+            <p>
+                Essa propriedade utilizada no CSS, serve para que se faça modificações de cortes de imagem. Veja exempplos: <br/>
+                <br/>
+                <img id="fit" src="https://espacododrone.com.br/wp-content/uploads/2019/08/onde-pilotar-drone-em-sp.jpg"/>
+                
+            </p>
+
+
+            
+        </div>
+        <div class="div4">
+            <p>Site criado por mim <br/>
+            2021 </p>
+        </div>
+
+    </body>
+</html>
