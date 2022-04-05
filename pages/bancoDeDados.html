@@ -21,10 +21,10 @@
 
             <section>
                 <h1>O que é Banco de Dados?</h1>
-                <p> Bancos de dados são locais/softwares de armazenamento, agrupamento e organização de informações. Os bancos de dados possum um sistema de gerenciamento para facilitar a manipulação e consulta dos dados armazenados. Os sistemas mais comuns são SQL, MySQL, PostgreSQL, Oracle, etc. </p>
+                <p> Bancos de dados são locais/softwares de armazenamento, agrupamento e organização de informações. Os bancos de dados possum um sistema de gerenciamento para facilitar a manipulação e consulta dos dados armazenados. Os sistemas mais comuns são MySQL, PostgreSQL, Oracle, etc. </p>
                 
                 <h1>HeidiSQL, phpMyAdmin, MySQL Workbench, DBeaver, etc </h1>
-                <p> São "Clientes MySQL", são Softwares utilizados para consultar o software original do banco de dados. Esses softwares são utilizados para fornecer uma interface grafica ao banco de dados de modo a facilitar a visualização e organização. </p>
+                <p> São "Clientes MySQL". São Softwares utilizados para consultar o software original do banco de dados. Esses softwares são utilizados para fornecer uma interface grafica ao banco de dados de modo a facilitar a visualização e organização. </p>
 
             </section>
 
@@ -118,11 +118,38 @@
                 <h2> SQL Count, Avg e Sum </h2> <br/>
                 <p> Esses comandos são utilizados para fazer contagem, média e soma dos resultados. Veja exemplos: </p> <br/>
                 <p> <b> SELECT COUNT(*) FROM produtos WHERE id_fornecedor = 6 ; </b>- Levantamento da CONTAGEM dos produtos onde o id de fornecedor é igual a 6 </p> <br/>
-                <p> <b> SELECT AVG(preco) FROM produtos WHERE PRECO >= 1000; </b> - Levantamento da media dos preços dos produtos, onde o preço dos itens é maior ou igual a 1000.  </p> <br/>
+                <p> <b> SELECT AVG(preco) FROM produtos WHERE preco >= 1000; </b> - Levantamento da media dos preços dos produtos, onde o preço dos itens é maior ou igual a 1000.  </p> <br/>
                 <p> <b> SELECT SUM(estoque) FROM produtos; </b> - Levantamento da soma de produtos do estque </p> <br/>
     
                 <h2> SQL Group By </h2> <br/>
-                
+                <p> Esse comando serve para agrupar resultados, de forma relacional, semelhante a uma tabela. Veja exemplos:</p> <br/>
+                <p> <b> SELECT SUM(estoque), id_fornecedor FROM produtos GROUP BY id_fornecedor</b> - Soma do estoque dos produtos, agrupado por id_fornecedor</p> <br/>
+                <p> <b> SELECT COUNT(*), id_fornecedor FROM produtos GROUP BY id_fornecedor; </b> - Contagem de produtos, agrupados por id_fornecedor.</p> <br/>
+
+                <h2> SQL Join </h2> <br/>
+                <p> Esse comando é utilizado para que se possibilite a junção de duas ou mais tabelas e trocar informações entre elas.</p> <BR/>
+                <p> <b> INNER JOIN - retorna resultados em que os registros das tabelas se correspondam totalmente, ou seja, não retorna nenhum dado isolado da tabela. </b></p> <br/>
+                <p> <b> SELECT produtos.id, produtos.nome, produtos.preco, produtos.estoque, fornecedores.nome FROM produtos INNER JOIN fornecedores ON fornecedores.id = produtos.id_fornecedor; </b> </p> <br/>
+                <p> Ou seja,  Selecionar o id dos produtos, o nome dos produtos, o preço dos produtos, o estoque dos produtos e o nome dos fornecedores DA tabela produtos E TAMBEM DA TABELA fornecedores TRAZENDO OS RESULTADOS PARA o fornecedor.nome, onde o id dos fornecedores correspondam ao id de fornecedor da lista produtos </p> <br/>
+                <p> <b> RIGHT JOIN - Retorna resultados da tabela da direita, independente de ter algum registro na tabela da esquerda que corresponda com a outra tabela </b></p> <br/>
+                <p> <b> SELECT produtos.id, produtos.nome, produtos.preco, produtos.estoque, fornecedores.nome FROM produtos RIGHT JOIN fornecedores ON fornecedores.id = produtos.id_fornecedor; </b> </p> <br/>
+                <p><b> LEFT JOIN - Retorna os resultados da tabela da esquerda, independente de ter algum registro na tabela da direita que corresponda com os registros com a outra tabela</b></p> <BR/>
+                <p> <b> SELECT produtos.id, produtos.nome, produtos.preco, produtos.estoque, fornecedores.nome FROM produtos LEFT JOIN JOIN fornecedores ON fornecedores.id = produtos.id_fornecedor; </b> </p> <br/>
+            
+                <h2> SQL insert Into </h2> <br/>
+                <p> Como inserir informações a tabelas atraves dos comandos. </p> <br/>
+                <p> <b> INSERT INTO usuarios (nome, datacadastro) VALUES ("Fulano", 2020-02-01); </b> - Ou seja, inserir em usuário no registro de nome e datacadastro, os seguintes valores "Fulano", 2020-02-01. </p> <br/>
+                <p> <b> INSERT INTO usuarios (nome, datacadastro) VALUES ("Beltrano", NOW()); </b> - Ou seja, inserir em usuários no registro de nomes e data de cadastro, os sequintes valores, "Beltrano", Data de Agora </p> <br/>
+            
+                <h2> SQL Update </h2> <br/>
+                <p> Como atualizar informações a tabelas atraves dos comandos. </p> <br/>
+                <p> <b> UPDATE usuarios SET nome = "Fulano da Silva") WHERE id = 2; </b> - Ou seja, atualizar na lista de usuários estabelecendo o nome = "Fulado da Silva", onde o id for = 2. </p> <br/>
+                <p> <b> UPDATE produtos SET preco = preco * 1.1 WHERE id_fornecedor = 6; </b> - Ou seja, atualizar na lista de produtos estabelecendo no preco uma multiplicação em 1.1, onde o id do fornecedor for = 6. </p> <br/>
+            
+                <h2> SQL Delete </h2> <br/>
+                <p> <b> UPDATE usuarios SET nome = "Fulano da Silva") WHERE id = 2; </b> - Ou seja, atualizar na lista de usuários estabelecendo o nome = "Fulado da Silva", onde o id for = 2. </p> <br/>
+               
+
 
             </section>
 
