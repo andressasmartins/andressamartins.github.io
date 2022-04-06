@@ -68,3 +68,46 @@ body p b {
     color: #ffffff;
     
 }
+#exemplo {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: #dedede 1px solid;
+    
+}
+.verde {
+    background-color: #00ff00;
+    font-weight: bold;
+    
+}
+.vermelho {
+    background-color: #ff0000;
+    font-weight: bold;
+
+}
+.azul {
+    background-color: #0000ff;
+    font-weight: bold;
+}
+#button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    
+}
+#button button, #exemploBotao button {
+    margin:5px;
+    padding: 5px;
+}
+.branco {
+    background-color: #ffffff;
+}
+#exemploBotao {
+    text-align: center;
+}

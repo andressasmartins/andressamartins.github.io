@@ -341,10 +341,131 @@
 
             <p> <b> document.querySelectorAll('exemplo') </b> - Para selecionar todos os resultados das classes com nome 'exemplo'.</p>
 
-            <h2> Manipulando class do elemento </h2>
+            <h2> Manipulando class dos elementos com classList.contains, classList.remove, classList.add </h2>
 
-            <p> </p>
-            
+            <p> Como fazer alterações a partir de classes dos elementos, exemplos: </p> <br/>
+            <p>
+                <div id="button">
+                <div id="exemplo"> Exemplo </div> <br/>
+                <button onclick="verde()">Verde</button>
+                <button onclick="vermelho()">Vermelho</button>
+                <button onclick="azul()">Azul</button>
+                </div>
+            </p>
+            <p>
+                <xmp>
+
+                    No html
+
+                        <div id="button">
+                        <div id="exemplo"> Exemplo </div> <br/>
+                        <button onclick="verde()">Verde</button>
+                        <button onclick="vermelho()">Vermelho</button>
+                        <button onclick="azul()">Azul</button>
+                        </div>
+
+                    No CSS
+
+                        .verde {
+                            background-color: #00ff00;
+                            
+                        }
+                        .vermelho {
+                            background-color: #ff0000;
+                        
+                        }
+                        .azul {
+                            background-color: #0000ff;
+                        }
+
+                    No Javascript
+
+                    function verde() {
+                        document.querySelector('#exemplo').classList.remove('azul')
+                        document.querySelector('#exemplo').classList.remove('vermelho')
+                        document.querySelector('#exemplo').classList.add('verde')
+                        document.querySelector('#exemplo').innerHTML = 'Verde'
+                    }
+                    function vermelho() {
+                        document.querySelector('#exemplo').classList.remove('verde')
+                        document.querySelector('#exemplo').classList.remove('azul')
+                        document.querySelector('#exemplo').classList.add('vermelho')
+                        document.querySelector('#exemplo').innerHTML = 'Vermelho'
+                    }
+                    function azul() {
+                        document.querySelector('#exemplo').classList.remove('verde')
+                        document.querySelector('#exemplo').classList.remove('vermelho')
+                        document.querySelector('#exemplo').classList.add('azul')
+                        document.querySelector('#exemplo').innerHTML = 'Azul'
+                    }
+
+                </xmp>
+
+            </p>
+            <p>Utilizando o innerHTML ainda é possivel mudar o texto do html.</p> <br/> <br/>
+
+            <p> 
+                <div  id="exemploBotao"> 
+                     <b>Exemplo com classList.contains </b><br/> <br/>
+                    <button id="botao" class="branco" onclick="trocar()"> Botão </button>
+
+                </div>
+            </p> <br/>
+
+            <p> 
+                <xmp>
+
+            No HTML 
+
+                <div  id="exemploBotao"> 
+                Exemplo com classList.contains <br/> <br/>
+                <button id="botao" class="branco" onclick="trocar()"> Botão </button>
+
+             No css
+
+                .vermelho {
+                    background-color: #ff0000;
+                }
+                .branco {
+                    background-color: #ffffff;
+                }
+
+            No Javascript 
+
+            function trocar() {
+
+                if (document.querySelector('#botao').classList.contains('branco')) {
+                    document.querySelector('#botao').classList.remove('branco');
+                    document.querySelector('#botao').classList.add('vermelho');
+                } else {
+                 document.querySelector('#botao').classList.remove('vermelho') 
+                  document.querySelector('#botao').classList.add('branco');
+             
+                }
+             }
+
+
+                </xmp>
+            </p>
+
+            <h2> Tipos de dados: String, Number, Boolean,  </h2>
+
+            <p> <b> String: </b> Corresponde a dados de texto. Exemplo: </p> <br/>
+            <p> var nome = "Zulema"; </p> <br/>
+            <p> <b> Number: </b> Corresponde a dados de numero. Exemplo: </p> <br/>
+            <p> var idade = 67; </p> <br/>
+           <p> <b> Boolean: </b> Corresponde a dados em true ou false. Exemplo: </p>
+           <p> var salvo = true; </p> <br/>
+            <p> <b> Undefined: </b> Corresponde a uma variavel sem valor definido. Exemplo: </p> <br/>
+            <p> var cidade; </p> <br/>
+
+            <h2> Como fazer Comentários no Javascript </h2>
+            <p>Para fazer comentários no Javascript basta colocar a mensagem na linha do codigo seguindo a seguinte estrutura:</p> <br/>
+            <p>// Esse é um comentário de uma unica linha.</p> <br/>
+            <p>/* Esse é um comentario extenso de varias linhas */</p>
+
+            <h2> Funções </h2>
+            <p> Um conjunto de codigos </p>
 
             </article>
                 </main>
