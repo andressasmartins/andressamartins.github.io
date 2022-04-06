@@ -1,0 +1,358 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,user-scalable=0"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../assets/css/jsstyle.css"/>
+        <title>Javascript</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="../assets/images/logo.png">
+                <img src="../assets/images/js.png">
+                
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        Item 1
+                    </li>
+                    <li>
+                        Item 2
+                    </li>
+                    <li>
+                        Item 3
+                    </li>
+                </ul>
+
+            </nav>
+
+        </header>
+        <main>
+            <article>
+
+            <h1>Javascript</h1>
+
+
+            <h2>O que é Javascript</h2>
+
+            <p>
+                JavaScript é uma <strong>linguagem de programação de alto nível</strong> criada, a princípio, para ser executada em navegadores e manipular comportamentos de páginas web.
+                Com seus scripts é possível incluir, em uma página estática, elementos dinâmicos como mapas, formulários, operações numéricas, animações, infográficos interativos e muito mais.
+            </p>
+            <p>
+            O JavaScript é uma das mais importantes tecnologias voltadas para o front-end e, unindo-se ao trio HTML, CSS e PHP, formam um grupo de linguagens que abrangem praticamente todas as exigências do desenvolvimento de uma página completa, dinâmica e com boa performance. <br/>
+            Mas o JS não se restringe mais apenas às páginas e aos navegadores, como foi durante vários anos: com o advento de diversos frameworks, APIs, melhorias e criação de centenas de funções, hoje já é possível utilizar JavaScript em aplicativos mobile, softwares para desktop e até mesmo em back-end. <br/>
+            </p>
+            <p>
+            JavaScript, originalmente, é uma linguagem de programação client-side, ou seja, é executada do lado do usuário, mais especificamente pelo navegador utilizado por este usuário.
+            Em outras palavras, isso significa que todas as suas ações são processadas na máquina de quem as utiliza, sem a necessidade de enviá-las a nenhum outro ambiente. 
+            Como nada é enviado a nenhum servidor externo para processamento, as respostas são imediatas. 
+            </p>
+
+            <h2>Onde colocar o codigo javascript?</h2>
+
+            <p>
+                Existem 2 formas principais de colocar o codigo javascript em uma pagina.
+            </p> <br/>
+            <p>
+                <strong>Primeira:</strong> abrindo em qualquer parte do html uma tag < "script" > e colocando a linha do codigo a ser executado dentro dela < /script >
+            </p> <br/>
+            <p>
+                <strong>Segunda:</strong> fazendo um arquivo externo igual com o css,  ex script.js e importando ele no head ou no body através da tag < scr ipt src="script.js"> < /scri pt>
+            </p> <br/>
+            <p>
+                É possivel definir a ordem em que o javascript da pagina sera carregado, colocando ele dentro do head, dessa forma o javascript é carregado antes mesmo do body do site, ou colocando ele no final do body, e dessa forma ele é executado e aplicado  nos conteudos da pagina após o carregamento do body. É recomendado que se siga essa segunda forma. 
+            </p>
+
+            <h2>Console</h2>
+
+            <p>
+            O console é uma area em que é permitida aplicações de javascript a todo o navegador. Ele registra informações como solicitações de rede, JavaScript, CSS, erros e avisos de segurança, além das mensagens explicitas registradas pelo código JavaScript.
+            </p>
+
+            <h2>Output</h2>
+
+            <p>
+                Existem 4 formas principais de mostrar informações em javascript
+            </p> <br/>
+            <p>
+                <strong>Primeira:</strong> Manipulando tags do html. 
+            </p> <br/>
+            <p>
+               <b>➡</b>
+                document.getElementById("nomedoid").innerHTML = "Escrever aqui o texto que se deseja exibir na tela";
+            </p> <br/>
+            
+            <p>
+                <strong>Segunda:</strong> escrevendo a informação a aparecer ao usuário na pagina do navegador.
+            </p> <br/>
+            <p>
+                <b>➡</b>
+                document.write("Algum texto");
+            </p> <br/>
+            <p>
+                 <strong>document = somente a pagina do navegador - mensagem ao usuário </strong>
+            </p> <br/>
+            <p>
+                <strong>Terceira:</strong> escrevendo a informação a aparecer ao usuario na janela do navegador
+            </p> <br/>
+            <p>
+                <b>➡</b>
+                window.alert("mensagem de exemplo");
+            </p> <br/>
+            <p>
+               <strong>window = janela inteira do navegador - mensagem ao usuário </strong>
+            </p> <br/>
+            <p>
+                <strong>Quarta:</strong> Escrevendo a informação para ser exibida apenas no console
+            </p> <br/>
+            <p>
+                <b>➡</b>
+                console.log("a mensagem inserida aqui aparece somente no console")
+            </p> <br/>
+            <p>
+                <strong>console = somente no console - mensagem ao desenvolvedor, não exibida na tela. </strong>
+            </p>
+
+            <h2>Variaveis</h2>
+
+            <p>   
+            Variáveis em Javascript são uma forma para se salvar dados que possam ser acessados e/ou manipulados posteriormente, independente do tipo desses dados, strings, números, booleanos, arrays, objetos ou funções. <br/>
+            </p> <br/>
+            <p>
+                <strong>Como criar variaveis: </strong>
+            </p> <br/>
+
+            <p>
+            <b>var</b> nomeDaVariavel = "valorDaVariavel";
+            </p>
+            <p>
+            <b>var</b> nome = "Andressa";
+            </p>
+            <p>
+            <b>var</b> idade = 24;
+            </p> <br/>
+            <p>
+            <strong>Importante!: O nome da variavel não pode conter espaço, caractere especial e nem começar com numero. Além disso,
+            o valor da variavel se for texto deve-se colocar entre "", e se for numero não deve ter aspas.
+           </strong> 
+           </p> <br/>
+           <p>
+               <strong>Concatenação:</strong> consiste na junção de variaveis. Ex:
+           </p> <br/>
+           <p>
+            <b>var</b> nome = "Andressa";
+            </p>
+            <p>
+                <b>var</b> sobrenome = "Martins";
+            </p>
+            <p>
+                <b>var</b> nomeCompleto = nome + " " + sobrenome;
+            </p> <br/>
+            <p>
+                console.log(nomeCompleto) vai ser igual a Andressa Martins
+            </p> <br/>
+            <p>
+             <b>var</b> primeiraNota = 9;
+             </p>
+             <p>
+                 <b>var</b> segundaNota = 10;
+             </p>
+             <p>
+                 <b>var</b> somaDasNotas = primeiraNota + segundaNota;
+             </p> <br/>
+            <p>
+                console.log(somaDasNotas) vai ser igual a 19
+            </p> <br/>
+            <p>
+                Para se adicionar um espaço entre uma variavel e outra é utilizado um espaço entre aspas e incluir na soma " ".
+            </p> <br/>
+            <p>
+                Somente são realizadas as expressões matematicas ( + - / * ) se os valores das variaveis estiverem escritos sem o uso das aspas, caso contrario, quando o numero é colocado dentro de aspas, ele é interpretado como um texto.
+            </p>
+
+
+            <h2>Tipos de definições de variaveis</h2>
+
+            <p>
+            <strong>Var:</strong>
+            </p> <br/>
+            <p>
+                Ex: var nome = "Andressa";
+            </p> <br/>
+            <p>
+                Nesse tipo de definição, a variavel é enviada para o escopo geral da tela, então é possivel usa-la em variaveis globais como window. É possivel ter acesso a ela em qualquer area do sistema. <br/>
+            </p>
+            <p>
+                Essa variavel pode ser sobreescrita após uma redefinição de seu valor. Dessa forma, o valor é sempre o ultimo que foi definido.
+            </p> <br/>
+            <p>
+                Por exemplo: 
+                <br/> <br/>
+                var nome = "Andressa"; <br/>
+                var nome = "Willian"; <br/>
+                var nome = "Gabriel"; <br/>
+                var nome = "Zoe"; <br/>
+                <br/>
+                Dessa forma, o valor final da variavel é "Zoe", pois foi o ultimo valor definido.
+                <br/> <br/>
+                <p>
+                    <strong>Let:</strong> 
+                </p> <br/>
+                <p>
+                    Ex: let nome = "Andressa";
+                </p> <br/>
+                <p>
+                    Nesse tipo de definição, a variavel fica disponivel apenas em um escopo espefifico do codigo. Apenas em uma area especifica do codigo.
+                </p> <br/>
+                <p>
+                    Por exemplo:
+                <br/> <br/>
+                    let nome = "Andressa"; <br/> 
+
+                    if (nome == "Andressa") { <br/> 
+                        let idade = 90; <br/> 
+                        console.log(idade); <br/>
+                    } 
+                <br/> <br/>
+                Nesse exemplo, variavel (idade) só funciona se estiver dentro da "caixa de condição" {}, se tentar usa-la fora da condição, colocando o console.log(idade) fora da caixa de codigo, por exemplo, não vai ser possivel identificar a atribuição dessa variavel.
+            </p> <br/> 
+            <p>
+                O ponto positivo do let é que evita o consumo desnecessario da memoria. E evita confusão entre as variaveis ao longo do codigo.
+            </p>
+            <p>
+                Outro ponto importante é que não é possivel redefinir o valor da variavel let em uma mesma area de codigo.
+            </p> <br/>
+            <p>
+                Por exemplo:
+                <br/> <br/>
+
+                let nome = "Andressa"; <br/> 
+                let nome = "Willian"; <br/> 
+                Essa forma esta <b>incorreta.</b>
+            </p> <br/>
+            <p>
+                <strong>Const:</strong> 
+            </p> <br/>
+            <p>
+             Ex: const nome = "Andressa";
+            </p> <br/>
+            <p>
+                Nesse tipo de definição a variavel é definida com um valor constante, ou seja, é impossivel modificar o valor dessa variavel. Uma vez definido o seu valor, este será o unico possivel dentro do codigo inteiro.
+            </p>
+
+            <h2>Condicionais - If e Else</h2>
+
+            <p> 
+                A estrutura condicional if permite ao JavaScript executar um trecho de código somente se uma determinada condição for verdadeira.
+            </p> <br/>
+            <p>
+                Por exemplo:
+                <br/><br/>
+
+                var hora = 9; <br/>
+
+                if ( hora < 12 ) { <br/>
+                    console.log("Bom dia"); <br/>
+                } else { <br/>
+                    console.log("Não é de manhã"); <br/>
+                } <br/>
+            </p> <br/>
+            <p>
+                Nesse exemplo, foi definifida a seguinte condição: se a hora for <b>menor</b> que 12, então o resultado da informação será "bom dia", caso não se cumpra essa condição, então o resultado é "não é de manha"
+            </p> <br/>
+                var hora = 9;  <br/>
+
+                if ( hora < 12 ) { <br/>
+                    console.log("Bom dia"); <br/>
+                } else if ( hora < 18 ) { <br/>
+                    console.log("Boa tarde"); <br/>
+                } else if ( hora <= 23 ) { <br/>
+                    console.log("Boa noite"); <br/>
+                    
+                }<br/>
+                <br/> 
+            <p>
+                Ja nesse exemplo a condição foi a seguinte: Se a hora for <b>menor</b> que 12, então o resultado é "bom dia", caso essa condição não se cumpra então verificar se a hora é <b>menor</b> do que 18, se positivo, o resultado é "boa tarde", caso essa condição também não seja cumprida, então verificar se a hora é <b>menor</b> ou igual a 23, se positivo o resultado é "boa noite".
+            </p> <br/>
+                var hora = 12; <br/>
+
+                if ( hora >= 12 && hora < 18 ) { <br/>
+                    console.log("Boa tarde"); <br/>
+                } <br/>
+                <br/>
+            <p>
+                 Nesse exemplo se utilizou uma condição com dois valores a serem verificados. Se hora é <b>maior ou igual</b> a 12 e se a hora for <b>menor</b> do que 18, então o resultado é "boa tarde"
+            </p>
+                <br/>
+                var hora = 18 <br/>
+
+                if ( hora == 12 || hora == 18 ) { <br/>
+                    console.log("Voce esta na hora do rush"); <br/>
+                } <br/>
+                <br/>
+            <p>
+                Nesse ultimo exemplo a condição foi a seguinte: se a hora for <b>igual</b> a 12 <b>ou</b> 18, então o resultado final é "você está na hora do rush". <br/>
+                <b>Importante:</b> nas condicionais, o "igual" é representado por <b>==</b> e o "ou" é representado por <b>||</b>
+            </p>
+
+            <h2> DOM </h2>
+
+            <P> Document Object Model - É a referencia aos elementos da estrutura da pagina/documento para serem manipulados via javascript. </P>
+
+            <h2> Selecionando Elementos </h2>
+
+            <p> <b> document.getElementById </b></p> <br/>
+
+            <p> <b> document.getElementById('exemplo').innerHTML = "< button> Botão< /button>" </b> </p> <BR/>
+            <P> Ou seja, Pegar o elemento do documento que tem o id "exemplo" e dentro do HTML fazer a seguinte modificação = < button>Botão< /button> (Colocar um botão).  </p> <br/>
+            
+
+            <p> <b> getElementsByClassName('exemplo') </b></p> <br/>
+
+            <p> Ou seja, pegar os elementos pelo nome da classe. Como é possivel atribuir uma classe a varios elementos, dessa forma é possivel pegar varios elementos com o mesmo nome de classe. </p> <br/>
+
+            <p> <b> getElementsByClassName('exemplo')[0].innerHTML = "alteracao" </b> </p> <br/>
+            <p> Ou seja, pegar os elementos pelo nome da classe 'exemplo' e dentro do primeiro item '0' (array 0), fazer a seguinte modificação no HTML = alteracao</p> <br/>
+
+
+            <p> <b> getElementsByTagName('div') </b></p> <br/>
+
+            <p> Ou seja, pegar todos os elementos pelo nome das tags.</p><br/>
+
+            <p> <b> getElementsByName('email') </b></p>
+
+            <p> Ou seja, pegar oe elementos pelo nome. ex: names de inputs </p> <br/>
+
+
+            <h2> Selecionando com querySelector </h2>
+
+            <p> Através desse comando é possivel fazer uma seleção por id, class, tag, nome, etc. Para retornar todos os resultados, e não somente o primeiro, é possivel utilizar a variação <b> querySelectorAll</b>Veja exemplos: </p> <br/>
+            
+            <p><b> document.querySelector('#exemplo')</b> - Para selecionar um elemento por id </p> <br/>
+
+            <p><b> document.querySelector('.exemplo')</b> - Para selecionar elementos pela classe </p> <br/>
+
+            <p><b> document.querySelector('button')</b> - Para selecionar elementos pela tag </p> <br/>
+
+            <p> <b> document.querySelectorAll('exemplo') </b> - Para selecionar todos os resultados das classes com nome 'exemplo'.</p>
+
+            <h2> Manipulando class do elemento </h2>
+
+            <p> </p>
+            
+
+            </article>
+                </main>
+
+                    
+
+
+
+                <script src="../assets/js/script.js"></script>
+            </body>
+        </html>
